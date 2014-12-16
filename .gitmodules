@@ -1,0 +1,3 @@
+[submodule "eleminty"]
+	path = eleminty
+	url = https://github.com/ucla/eleminty
