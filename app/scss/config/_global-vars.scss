@@ -1,0 +1,107 @@
+/////////////////////////////////////////
+///             LAYOUT
+/////////////////////////////////////////
+
+// breakpoints
+$grid-liquid: 34em;
+$grid-elastic: 38em;
+
+// singularity.gs layout
+@include add-grid(4);
+@include add-gutter(1/10);
+
+/////////////////////////////////////////
+///            COLOURS
+/////////////////////////////////////////
+
+// Primary UCLA Colours
+
+$uclablue: #3399cc;
+$uclasafeblue: #347bad;
+$uclagold: #ffe800;
+
+// Secondary UCLA Colours
+
+$ucladarkblue: #0055a6;
+$uclalightblue: #00a5e5;
+
+// Tertiary UCLA Colours
+
+$uclayellowneon: #ffff00;
+$uclagreenneon: #00ff87;
+$uclapinkneon: #ff00a5;
+$uclaliteblueneon: #00ffff;
+$uclapurpleneon: #8237ff;
+$uclagrey: #666;
+
+// Semantic Colours
+
+$neutral: #ccc;
+$white: #fff;
+$black: #000;
+
+$primary-color: $uclasafeblue;
+$primary-color-alternate-state: $ucladarkblue;
+$secondary-color: $uclagold;
+
+$error-color: $uclapinkneon;
+$error-color-dark: darken($uclapinkneon, 42%);
+$error-color-dark-alt: darken($uclapinkneon, 46%);
+
+$anchor-color: $uclapurpleneon;
+$anchor-color-hover: #1e4b87;
+$bullet-color: $uclagreenneon;
+
+$footer-link-color: $white;
+$footer-link-color-hover: $uclayellowneon;
+
+$form-valid-color: $uclalightblue;
+$form-invalid-color: $uclapinkneon;
+$input-background-color: lighten($neutral, 19%);
+$input-background-color-focus: $white;
+
+/////////////////////////////////////////
+///       TYPOGRAPHY / RHYTHM
+/////////////////////////////////////////
+
+$html-background: #D3E7F5;
+
+$body-text-color: #444;
+$body-background-color: $white;
+
+$font-stack: 'Proxima Nova', Verdana, sans-serif;
+$font-stack-alt: 'Proxima Nova', Verdana, sans-serif;
+$global-letter-spacing: 0.5px;
+
+// prepare for media queries to shift base font and have that inherited down em chain
+body {
+	font-size: 100%;
+}
+
+$h1-font-size: 2rem;
+$h2-font-size: 1.75rem;
+$h3-font-size: 1.25rem;
+$h4-font-size: 1.125rem;
+
+$p-font-size: 1rem;
+$meta-font-size: .8rem;
+
+$base-line-height: 1.375rem;
+
+$default-spacing: 1rem;
+$half-spacing: $default-spacing / 2;
+$double-spacing: $default-spacing * 2;
+$triple-spacing: $default-spacing * 3;
+$quad-spacing: $default-spacing * 4;
+
+$global-border-radius: 3px;
+
+/////////////////////////////////////////
+///           FONT FACE
+/////////////////////////////////////////
+
+@font-face {
+	font-family: 'Proxima Nova';src: url('../fonts/ProximaNova-Regular.eot');src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),url('../fonts/ProximaNova-Regular.woff') format('woff'),url('../fonts/ProximaNova-Reg.otf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}

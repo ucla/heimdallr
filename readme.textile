@@ -1,9 +1,9 @@
 h1. Heimdallr
 
-A set of modular account management tools
+Front end for admin level UCLA (BOL) account management.
 
 h2. Dependencies
 
-This contains custom elements from polymer and eleminty. Both of these are in the ucla/eleminty repo, which is included as submodule of heimdallr.
+This contains custom elements from polymer and eleminty.
 
-If a new version of eleminty comes out, you can update it by running @git submodule update --remote@ from within this project dir. The web components used in Heimdallr will automatically import those updated components. :)
+Built from https://github.com/ucla/generator-polymer

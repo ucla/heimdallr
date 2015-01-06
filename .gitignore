@@ -1,3 +1,7 @@
-_site
+node_modules
+dist
+test/temp
 .sass-cache
-Gemfile.lock
+app/bower_components
+.tmp
+test/bower_components/
