@@ -66,9 +66,9 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
-        loadPath: 'bower_components'
+        compass: true
         // To use without bundled gems, comment below
-          , bundleExec: true
+        , bundleExec: true
       },
       dist: {
         options: {
