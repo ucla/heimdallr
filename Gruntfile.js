@@ -39,7 +39,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/*.html',
           '<%= yeoman.app %>/elements/{,*/}*.html',
           '{.tmp,<%= yeoman.app %>}/elements/{,*/}*.css',
-          '{.tmp,<%= yeoman.app %>}/css/{,*/}*.css',
+          '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -50,14 +50,14 @@ module.exports = function (grunt) {
       },
       styles: {
         files: [
-          '<%= yeoman.app %>/css/{,*/}*.css',
+          '<%= yeoman.app %>/styles/{,*/}*.css',
           '<%= yeoman.app %>/elements/{,*/}*.css'
         ],
         tasks: ['copy:styles', 'autoprefixer:server']
       },
       sass: {
         files: [
-          '<%= yeoman.app %>/scss/{,*/}*.{scss,sass}',
+          '<%= yeoman.app %>/styles/{,*/}*.{scss,sass}',
           '<%= yeoman.app %>/elements/{,*/}*.{scss,sass}',
         ],
         tasks: ['sass:server', 'autoprefixer:server']
@@ -77,7 +77,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>',
-          src: ['scss/{,*/}*.{scss,sass}', 'elements/{,*/}*.{scss,sass}'],
+          src: ['styles/{,*/}*.{scss,sass}', 'elements/{,*/}*.{scss,sass}'],
           dest: '<%= yeoman.dist %>',
           ext: '.css'
         }]
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>',
-          src: ['scss/{,*/}*.{scss,sass}', 'elements/{,*/}*.{scss,sass}'],
+          src: ['styles/{,*/}*.{scss,sass}', 'elements/{,*/}*.{scss,sass}'],
           dest: '.tmp',
           ext: '.css'
         }]
@@ -182,7 +182,7 @@ module.exports = function (grunt) {
     },
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/css/{,*/}*.css'],
+      css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
         dirs: ['<%= yeoman.dist %>'],
         blockReplacements: {
