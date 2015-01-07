@@ -3,12 +3,7 @@
 /////////////////////////////////////////
 
 // breakpoints
-$grid-liquid: 34em;
-$grid-elastic: 38em;
-
-// singularity.gs layout
-@include add-grid(4);
-@include add-gutter(1/10);
+$multi-column: 34em;
 
 /////////////////////////////////////////
 ///            COLOURS
@@ -64,10 +59,9 @@ $input-background-color-focus: $white;
 ///       TYPOGRAPHY / RHYTHM
 /////////////////////////////////////////
 
-$html-background: #D3E7F5;
-
+$html-background: $white;
+$body-background: $white;
 $body-text-color: #444;
-$body-background-color: $white;
 
 $font-stack: 'Proxima Nova', Verdana, sans-serif;
 $font-stack-alt: 'Proxima Nova', Verdana, sans-serif;
