@@ -4,15 +4,27 @@
 
 :host {
   display: block;
-}
-
-header {
   background-color: #003B6A;
   background-image: linear-gradient(to bottom, #003B6A, #265F8E);
+  border-bottom: 1px solid #17244c;
+  min-height: 100px;
+  padding-top: $default-spacing;
+}
+
+img {
+  float: left;
+  max-height: 80px;
 }
 
 h1 {
+  float: left;
   color: $white;
   font-family: 'Proxima Nova', Verdana, sans-serif;
-  font-weight: normal;
+  font-size: $h2-font-size;
+  margin: 0;
+  padding-top: 2.6rem;
+}
+
+aside {
+  float: right;
 }
