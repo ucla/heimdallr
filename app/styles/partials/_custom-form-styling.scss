@@ -1,8 +1,10 @@
 .hero-form {
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .hero-form-input {
   font-size: $h1-font-size;
-  margin: auto;
+  width: 41rem;
 }

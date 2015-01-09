@@ -25,16 +25,19 @@
 <body unresolved>
   
   <eleminty-ucla-header>
-    <h1>UCLA Logon Management Tools</h1>
+    <h1>Account Management</h1>
   </eleminty-ucla-header>
   
-  <section role="main" class="hero-form">
+  <section role="main">
 
-    <form id="lookup" role="form">
+    <form id="lookup" role="form" class="hero-form">
       <label for="lookup-id-uid" hidden>Account ID</label>
-      <input id="lookup-id-uid" name="lookup-id-uid" class="hero-form-input" type="text" placeholder="Look up a UCLA Logon ID or UID" aria-required="true" pattern=".{3,15}" required autofocus oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
+      <input id="lookup-id-uid" name="lookup-id-uid" class="hero-form-input" type="text" placeholder="Search via UCLA Logon ID or UID" aria-required="true" pattern=".{3,15}" required autofocus oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
       
   		<button class="primary-button" type="submit" name="lookup" hidden></button>
+  		
+  		<p><strong>Recent Queries: </strong><a href="query-results.html">jbruin</a>, <a href="query-results.html">gjbruin</a>, <a href="query-results.html">imbanks</a>, <a href="query-results.html">ibanks</a>, <a href="query-results.html">uebelhart</a>, <a href="query-results.html">vanganar</a>.</p>
+  		
     </form>
 
   </section>

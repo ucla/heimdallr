@@ -19,9 +19,10 @@
 @import 'config/global-vars';
 @import 'config/app-specific-vars';
 
-// partials
+// general IAM partials
+@import 'partials/layout';
 @import 'partials/global-elements';
 @import 'partials/form-elements';
-@import 'partials/layout';
+@import 'partials/custom-form-styling';
 
 // app specific styles

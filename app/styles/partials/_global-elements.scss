@@ -12,6 +12,7 @@ body {
   color: $body-text-color;
   font-family: $font-stack;
   letter-spacing: $global-letter-spacing;
+  line-height: $base-line-height;
   @include enable-ligatures();
 }
 
@@ -26,7 +27,6 @@ h1 {
   @include breakpoint($multi-column) {
     font-size: $h1-font-size;
   }
-  line-height: $base-line-height * .9;
   margin: $half-spacing 0;
 }
 
@@ -43,6 +43,10 @@ h3 {
 
 h4 {
   font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
 }
 
 p {

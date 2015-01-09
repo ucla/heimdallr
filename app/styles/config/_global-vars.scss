@@ -72,15 +72,17 @@ body {
 	font-size: 100%;
 }
 
-$h1-font-size: 2rem;
-$h2-font-size: 1.75rem;
-$h3-font-size: 1.25rem;
-$h4-font-size: 1.125rem;
+$h1-font-size: 2.625rem; //42px @ 100%base
+$h2-font-size: 2rem; // 32px @ 100%base
+$h3-font-size: 1.5rem; // 26px @ 100%base
+$h4-font-size: 1.25rem; // 20px @ 100%base
+$h5-font-size: 1.125rem; // 18px @100%base
+$h6-font-size: 1rem; // 16px @100%base
 
-$p-font-size: 1rem;
-$meta-font-size: .8rem;
+$p-font-size: 1rem; // 16px @100%base
+$meta-font-size: .8125rem; //13px @100%base
 
-$base-line-height: 1.375rem;
+$base-line-height: 1.5;
 
 $default-spacing: 1rem;
 $half-spacing: $default-spacing / 2;
