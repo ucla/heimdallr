@@ -108,6 +108,10 @@ button, .button {
   border-radius: $global-border-radius;
 }
 
+.button a {
+  text-decoration: none;
+}
+
 /* Firefox: Get rid of the inner focus border */
 button::-moz-focus-inner {
   padding: 0;

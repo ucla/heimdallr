@@ -7,3 +7,7 @@ h2. Dependencies
 This contains custom elements from polymer and eleminty.
 
 Built from https://github.com/ucla/generator-polymer
+
+You'll need "https://www.npmjs.com":NPM, "http://bower.io":Bower & "http://bundler.io":Bundler. Once you have those going, run a bower + bundler install.
+
+$ @grunt serve@ to view or just $ @grunt@ to build out @/dist@.
