@@ -1,0 +1,30 @@
+@import 'breakpoint';
+@import 'toolkit';
+@import 'config/global-vars';
+
+:host {
+  display: flex;
+  flex-shrink: 0;
+  background-image: linear-gradient(to top, #003B6A, #265F8E);
+  border-top: 1px solid #17244c;
+  padding: $half-spacing;
+  color: lighten($body-text-color, 40%);
+  font-size: $meta-font-size;
+}
+
+p {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: $footer-link-color;
+  &:visited { 
+    color: $footer-link-color;
+  }
+  &:hover, &:focus {
+    color: $footer-link-color-hover;
+    text-decoration: underline;
+  } 
+}
+

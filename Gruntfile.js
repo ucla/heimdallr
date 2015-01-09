@@ -58,7 +58,7 @@ module.exports = function (grunt) {
       sass: {
         files: [
           '<%= yeoman.app %>/styles/{,*/}*.{scss,sass}',
-          '<%= yeoman.app %>/elements/{,*/}*.{scss,sass}',
+          '<%= yeoman.app %>/elements/{,*/}*.{scss,sass}'
         ],
         tasks: ['sass:server', 'autoprefixer:server']
       }
@@ -199,7 +199,7 @@ module.exports = function (grunt) {
         },
         files: {
           '<%= yeoman.dist %>/elements/elements.vulcanized.html': [
-            '<%= yeoman.dist %>/elements/elements.html',
+            '<%= yeoman.dist %>/elements/elements.html'
           ]
         }
       }
@@ -252,7 +252,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>',
           dest: '.tmp',
-          src: ['{css,elements}/{,*/}*.css']
+          src: ['{styles,elements}/{,*/}*.css']
         }]
       }
     },

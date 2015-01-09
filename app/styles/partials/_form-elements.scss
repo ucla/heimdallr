@@ -42,13 +42,6 @@ select:focus:invalid:focus {
   border-color: $form-invalid-color;
 }
 
-.hero-input {
-  font-size: $h1-font-size;
-  width: 60%;
-  display: block;
-  margin: $quad-spacing auto;
-}
-
 ::-webkit-input-placeholder {
   color: darken($neutral, 20%);
 }

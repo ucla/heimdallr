@@ -3,16 +3,16 @@
 html {
   background: $html-background;
   background-size: cover;
-  box-sizing: border-box;
-  position: relative;
-  min-height: 100%;
-  width: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   color: $body-text-color;
   font-family: $font-stack;
   letter-spacing: $global-letter-spacing;
+  @include enable-ligatures();
 }
 
 h1, h2, h3, h4 {

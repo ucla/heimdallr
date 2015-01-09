@@ -3,7 +3,9 @@
 @import 'config/global-vars';
 
 :host {
-  display: block;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-start;
   background-color: #003B6A;
   background-image: linear-gradient(to bottom, #003B6A, #265F8E);
   border-bottom: 1px solid #17244c;
@@ -12,12 +14,10 @@
 }
 
 img {
-  float: left;
   max-height: 80px;
 }
 
 h1 {
-  float: left;
   color: $white;
   font-family: 'Proxima Nova', Verdana, sans-serif;
   font-size: $h2-font-size;
@@ -26,5 +26,5 @@ h1 {
 }
 
 aside {
-  float: right;
+  align-self: flex-end;
 }

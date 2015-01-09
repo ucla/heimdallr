@@ -2,6 +2,7 @@
 require 'breakpoint'
 require 'compass-normalize'
 require 'toolkit'
+require 'sass-a11y'
 
 # USE BUNDLER!!
 
