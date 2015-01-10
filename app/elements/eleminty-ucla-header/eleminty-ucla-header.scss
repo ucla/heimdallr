@@ -25,6 +25,13 @@ h1 {
   padding-top: 2.1rem;
 }
 
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 aside {
   align-self: flex-end;
 }
