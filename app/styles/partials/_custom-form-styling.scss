@@ -1,15 +1,14 @@
 .hero-form {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  
 }
 
-.hero-form-input {
+.hero-form--input {
   font-size: $h1-font-size;
   width: 41rem;
   margin-bottom: 0;
 }
 
-.sinking {
+.check-queue {
   margin-top: $octo-spacing;
+  align-self: center;
 }

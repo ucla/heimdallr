@@ -1,0 +1,47 @@
+@import 'breakpoint';
+@import 'toolkit';
+@import 'config/global-vars';
+
+:host {
+  
+}
+
+h2 {
+  color: $body-text-color;
+  padding: 0 $half-spacing;
+  margin-bottom: 0;
+}
+
+dl {
+  font-size: $meta-font-size;
+  margin-top: 0;
+}
+
+dt, dd {
+  overflow: hidden;
+}
+
+dt {
+  float: left;
+  width: 35%;
+  padding-left: $half-spacing;
+  background: lighten($neutral, 10%);
+  border-bottom: 1px solid $neutral;
+  &:nth-of-type(even) {
+    background: lighten($neutral, 5%);
+    border-bottom: 1px solid darken($neutral, 5%);
+  }
+}
+
+dd {
+  word-wrap: break-word;
+  width: 65%;
+  background: lighten($neutral, 10%);
+  border-bottom: 1px solid $neutral;
+  margin-left: 0;
+  &:nth-of-type(even) {
+    background: lighten($neutral, 5%);
+    border-bottom: 1px solid $neutral;
+  }
+}
+
