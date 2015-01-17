@@ -31,9 +31,8 @@
   <section role="main" class="general-contents">
     
     <header>
-      <h1>Joe Bruin's Identity</h1>
-      <p><a href="/">(Search for someone else).</a></p>
-    <header>
+      <h1>Joe Bruin's Identity <a href="/">(or search for someone else's)</a></h1>
+    </header>
       
     <article class="query-results">
     
@@ -48,7 +47,7 @@
         </dl>
       </labeled-results>
       
-      <labeled-results class="ed">
+      <labeled-results class="pink">
         <h2>Enterprise Directory</h2>
         
         <dl>
@@ -69,7 +68,7 @@
         </dl>
       </labeled-results>
       
-      <labeled-results class="bol">
+      <labeled-results class="yellow">
         <h2>Bruin Online</h2>
         
         <dl>
@@ -98,7 +97,7 @@
         </dl>
       </labeled-results>
       
-      <labeled-results class="history">
+      <labeled-results class="white">
         <h2>History of Account Changes</h2>
         
         <dl>
@@ -120,9 +119,20 @@
           <dd>First deactivation notice sent.</dd>
         </dl>
       </labeled-results>
-  
-      <labeled-results class="google">
-        <h2>Enterprise Directory</h2>
+      
+      <labeled-results class="blue">
+        <h2>Bruin Online Mail</h2>
+        
+        <dl>
+          <dt>Quota</dt>
+          <dd>jbruin is using 53.36 of 1000.00 MB</dd>
+          <dt>Sieve</dt>
+          <dd>no sieve rules</dd>
+        </dl>
+      </labeled-results>
+
+      <labeled-results class="orange">
+        <h2>Google Apps</h2>
         
         <dl>
           <dt>Username</dt>
@@ -153,7 +163,27 @@
     </article>
     
     <aside class="account-actions">
+            
+      <paper-tabs selected="{{selected}}">
+        <paper-tab>Map an ID</paper-tab>
+        <paper-tab>Change Password</paper-tab>
+        <paper-tab>Mail Storage</paper-tab>
+        <paper-tab>BOL Services</paper-tab>
+        <paper-tab>Set Affiliation</paper-tab>
+        <paper-tab>Manage Holds</paper-tab>
+        <paper-tab>Audit History</paper-tab>
+      </paper-tabs>
       
+      <core-pages selected="{{selected}}">
+        <div>Page 1</div>
+        <div>Page 2</div>
+        <div>Page 3</div>
+        <div>Page 4</div>
+        <div>Page 5</div>
+        <div>Page 6</div>
+        <div>Page 7</div>
+      </core-pages>
+            
     </aside>
 
   </section>

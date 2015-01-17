@@ -10,11 +10,25 @@
 
 .general-contents {
   display: block;
-  width: 94%;
+  width: 98%;
   margin: 0 auto;
   flex: 1 0 auto;
 }
 
+.query-results {
+  width: 43%;
+  float: left;
+}
+
+.account-actions {
+  width: 55%;
+  float: right;
+}
+
+.status h2, .account-actions h2 {
+  margin-top: 0;
+}
+
 paper-tab::shadow #ink {
-  color: #ff4081;
+  color: $ucla-blue;
 }
