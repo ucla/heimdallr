@@ -25,22 +25,27 @@
 <body unresolved>
   
   <ucla-header>
-    <h1>Account Administration</h1>
+    <h1>UCLA Account Management</h1>
+    
+    <aside>
+      <p>Logged in as Eugene Acosta</p>
+      <a href="#" class="button right">Log out</a>
+    </aside>
   </ucla-header>
   
   <section role="main" class="general-contents">
     
     <header>
-      <h1>Joe Bruin's Identity <a href="/">(or search for someone else's)</a></h1>
+      <h1>Manage Joe Bruin's Identity <a href="/">(or search for someone else's)</a></h1>
     </header>
       
     <article class="query-results">
     
       <labeled-results class="status">
-        <h2>Current Status</h2>
+        <h2>BOL Account Flags</h2>
         
         <dl>
-          <dt>BOL Deactivation Hold Status</dt>
+          <dt>Deactivation Hold</dt>
           <dd>Holding</dd>
           <dt>BOL Special</dt>
           <dd>Affiliation	Data Preservation</dd>
@@ -97,8 +102,8 @@
         </dl>
       </labeled-results>
       
-      <labeled-results class="white">
-        <h2>History of Account Changes</h2>
+      <labeled-results>
+        <h2>Recent Account Changes</h2>
         
         <dl>
           <dt>November 18, 2014</dt>
@@ -163,8 +168,8 @@
     </article>
     
     <aside class="account-actions">
-            
-      <paper-tabs selected="{{selected}}">
+      
+      <paper-tabs selected="{{selected}}" noink>
         <paper-tab>Map an ID</paper-tab>
         <paper-tab>Change Password</paper-tab>
         <paper-tab>Mail Storage</paper-tab>
@@ -175,7 +180,25 @@
       </paper-tabs>
       
       <core-pages selected="{{selected}}">
-        <div>Page 1</div>
+        <div>
+          
+          <form id="map-an-id" role="form">
+          	
+          	<fieldset>
+          		<legend>Map UID to this Account</legend>
+          
+          		<label for="map-an-id--uid" hidden>UID to be mapped</label>
+          		<input id="map-an-id--uid" name="logon" type="text" placeholder="Nine Digit UID to be Mapped to UCLA Logon" aria-required="true" pattern=".{9}" required autofocus oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
+          
+          		<button class="primary-button" type="submit" name="map-an-id">Map it!</button>
+          	</fieldset>
+          	
+          </form>
+          
+          <h3>
+            
+          
+        </div>
         <div>Page 2</div>
         <div>Page 3</div>
         <div>Page 4</div>

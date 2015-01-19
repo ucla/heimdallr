@@ -16,19 +16,30 @@
 }
 
 .query-results {
-  width: 43%;
+  width: 39rem;
   float: left;
 }
 
-.account-actions {
-  width: 55%;
+.left {
+  float: left;
+}
+
+.right {
   float: right;
+}
+
+.full {
+  width: 100%;
+}
+
+.account-actions {
+  margin-left: 41rem;
 }
 
 .status h2, .account-actions h2 {
   margin-top: 0;
 }
 
-paper-tab::shadow #ink {
-  color: $ucla-blue;
+core-pages .core-selected {
+  background: $neutral;
 }

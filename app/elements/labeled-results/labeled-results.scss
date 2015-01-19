@@ -25,43 +25,43 @@ dt, dd {
 
 dt {
   float: left;
-  width: 30%;
+  width: 25%;
   padding-left: $half-spacing;
-  background: lighten($neutral, 10%);
-  border-bottom: 1px solid $neutral;
+  background: lighten($neutral, 16%);
+  border-bottom: 1px solid lighten($neutral, 13%);
   &:nth-of-type(even) {
-    background: lighten($neutral, 8%);
-    border-bottom: 1px solid $neutral;
+    background: lighten($neutral, 18%);
+    border-bottom: 1px solid lighten($neutral, 13%);
   }
 }
 
 dd {
   word-wrap: break-word;
-  width: 70%;
-  background: lighten($neutral, 10%);
-  border-bottom: 1px solid $neutral;
+  width: 75%;
   margin-left: 0;
+  background: lighten($neutral, 16%);
+  border-bottom: 1px solid lighten($neutral, 13%);
   &:nth-of-type(even) {
-    background: lighten($neutral, 8%);
-    border-bottom: 1px solid $neutral;
+    background: lighten($neutral, 18%);
+    border-bottom: 1px solid lighten($neutral, 13%);
   }
 }
 
 :host(.pink) {
   dt {
-    background: mix($ucla-pink, $white, 50%);
-    border-bottom: 1px solid mix($ucla-pink, $white, 55%);
+    background: mix($ucla-pink, $white, 40%);
+    border-bottom: 1px solid mix($ucla-pink, $white, 45%);
     &:nth-of-type(even) {
-      background: mix($ucla-pink, $white, 48%);
-      border-bottom: 1px solid mix($ucla-pink, $white, 55%);
+      background: mix($ucla-pink, $white, 38%);
+      border-bottom: 1px solid mix($ucla-pink, $white, 45%);
     }
   }
   dd {
-    background: mix($ucla-pink, $white, 50%);
-    border-bottom: 1px solid mix($ucla-pink, $white, 55%);
+    background: mix($ucla-pink, $white, 40%);
+    border-bottom: 1px solid mix($ucla-pink, $white, 45%);
     &:nth-of-type(even) {
-      background: mix($ucla-pink, $white, 48%);
-      border-bottom: 1px solid mix($ucla-pink, $white, 55%);
+      background: mix($ucla-pink, $white, 38%);
+      border-bottom: 1px solid mix($ucla-pink, $white, 45%);
     }
   }
 }
@@ -81,25 +81,6 @@ dd {
     &:nth-of-type(even) {
       background: lighten($ucla-gold, 18%);
       border-bottom: 1px solid $ucla-gold;
-    }
-  }
-}
-
-:host(.white) {
-  dt {
-    background: lighten($neutral, 16%);
-    border-bottom: 1px solid lighten($neutral, 13%);
-    &:nth-of-type(even) {
-      background: lighten($neutral, 18%);
-      border-bottom: 1px solid lighten($neutral, 13%);
-    }
-  }
-  dd {
-    background: lighten($neutral, 16%);
-    border-bottom: 1px solid lighten($neutral, 13%);
-    &:nth-of-type(even) {
-      background: lighten($neutral, 18%);
-      border-bottom: 1px solid lighten($neutral, 13%);
     }
   }
 }
@@ -125,18 +106,18 @@ dd {
 
 :host(.orange) {
   dt {
-    background: lighten($ucla-orange, 10%);
+    background: lighten($ucla-orange, 14%);
     border-bottom: 1px solid $ucla-orange;
     &:nth-of-type(even) {
-      background: lighten($ucla-orange, 8%);
+      background: lighten($ucla-orange, 12%);
       border-bottom: 1px solid $ucla-orange;
     }
   }
   dd {
-    background: lighten($ucla-orange, 10%);
+    background: lighten($ucla-orange, 14%);
     border-bottom: 1px solid $ucla-orange;
     &:nth-of-type(even) {
-      background: lighten($ucla-orange, 8%);
+      background: lighten($ucla-orange, 12%);
       border-bottom: 1px solid $ucla-orange;
     }
   }
