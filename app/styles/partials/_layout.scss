@@ -27,6 +27,10 @@
   float: left;
 }
 
+.account-actions {
+  margin-left: 41rem;
+}
+
 .left {
   float: left;
 }
@@ -45,14 +49,12 @@
   }
 }
 
-.account-actions {
-  margin-left: 41rem;
-}
-
 .status h2, .account-actions h2 {
   margin-top: 0;
 }
 
-core-pages .core-selected {
-  background: $neutral;
+div.core-selected {
+  position: relative;
+  padding: $half-spacing;
+  margin-bottom: $default-spacing;
 }
