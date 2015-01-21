@@ -22,24 +22,24 @@
   <!-- endbuild-->
 </head>
 
-<body unresolved>
+<body unresolved class="part-time">
   
   <ucla-header>
     <h1>UCLA Account Management</h1>
     
     <aside>
-      <p>Logged in as Eugene Acosta</p>
+      <p>Logged in as Someone</p>
       <a href="#" class="button right">Log out</a>
     </aside>
   </ucla-header>
   
-  <section role="main" class="general-contents">
+  <section role="main">
     
     <header>
-      <h1>Manage Joe Bruin's Identity <a href="/">(or search for someone else's)</a></h1>
+      <h1>Manage Joe Bruin's Identity <a href="/">(or someone else's)</a></h1>
     </header>
-      
-    <article class="query-results">
+    
+    <article>
     
       <labeled-results class="status">
         <h2>BOL Account Flags</h2>
@@ -135,7 +135,7 @@
           <dd>no sieve rules</dd>
         </dl>
       </labeled-results>
-
+  
       <labeled-results class="orange">
         <h2>Google Apps</h2>
         
@@ -164,51 +164,11 @@
           <dd>Disabled</dd>
         </dl>
       </labeled-results>
+      
+      <h2><a href="bol-part-time-password-change-request.html" class="button full">Launch Password Change Request Form</a></h2>
     
     </article>
     
-    <aside class="account-actions">
-      
-      <paper-tabs selected="{{selected}}" noink>
-        <paper-tab>Map an ID</paper-tab>
-        <paper-tab>Change Password</paper-tab>
-        <paper-tab>Mail Storage</paper-tab>
-        <paper-tab>BOL Services</paper-tab>
-        <paper-tab>Set Affiliation</paper-tab>
-        <paper-tab>Manage Holds</paper-tab>
-        <paper-tab>Audit History</paper-tab>
-      </paper-tabs>
-      
-      <core-pages selected="{{selected}}">
-        <div>
-          
-          <form id="map-an-id" role="form">
-          	
-          	<fieldset>
-          		<legend>Map UID to this Account</legend>
-          
-          		<label for="map-an-id--uid" hidden>UID to be mapped</label>
-          		<input id="map-an-id--uid" name="logon" type="text" placeholder="Nine Digit UID to be Mapped to UCLA Logon" aria-required="true" pattern=".{9}" required autofocus oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
-          
-          		<button class="primary-button" type="submit" name="map-an-id">Map it!</button>
-          	</fieldset>
-          	
-          </form>
-          
-          <h3>
-            
-          
-        </div>
-        <div>Page 2</div>
-        <div>Page 3</div>
-        <div>Page 4</div>
-        <div>Page 5</div>
-        <div>Page 6</div>
-        <div>Page 7</div>
-      </core-pages>
-            
-    </aside>
-
   </section>
   
   <ucla-footer>

@@ -1,4 +1,4 @@
-.centered-query {
+.home section[role="main"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,9 +8,16 @@
   margin: auto;
 }
 
-.general-contents {
+.full-time section[role="main"] {
   display: block;
   width: 98%;
+  margin: 0 auto;
+  flex: 1 0 auto;
+}
+
+.part-time section[role="main"] {
+  display: block;
+  width: 41rem;
   margin: 0 auto;
   flex: 1 0 auto;
 }
@@ -30,6 +37,12 @@
 
 .full {
   width: 100%;
+}
+
+.inline-label-input {
+  input {
+    width: 1.5rem;
+  }
 }
 
 .account-actions {
