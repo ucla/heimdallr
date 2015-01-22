@@ -27,6 +27,7 @@ dt {
   float: left;
   width: 25%;
   padding-left: $half-spacing;
+  padding-top: .2rem;
   background: lighten($neutral, 16%);
   border-bottom: 1px solid lighten($neutral, 13%);
   &:nth-of-type(even) {
@@ -39,6 +40,7 @@ dd {
   word-wrap: break-word;
   width: 75%;
   margin-left: 0;
+  padding-top: .2rem;
   background: lighten($neutral, 16%);
   border-bottom: 1px solid lighten($neutral, 13%);
   &:nth-of-type(even) {

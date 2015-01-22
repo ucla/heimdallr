@@ -1,0 +1,27 @@
+table {
+  margin: $default-spacing 0;
+}
+
+td, th {
+  font-size: inherit;
+  margin: 0;
+  overflow: visible; /*to make ths where the title is really long work*/
+  padding: 0.5em 1em; /* cell padding */
+}
+
+ td:first-child,
+ th:first-child {
+ border-left-width: 0;
+}
+
+ thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+/* nth-child selector for modern browsers */
+tr:nth-child(2n-1) td {
+  background-color: #f2f2f2;
+}
