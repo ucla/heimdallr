@@ -6,6 +6,8 @@ paper-tabs {
   }
 }
 
-h3 {
-  font-size: $p-font-size;
+div.core-selected {
+  position: relative;
+  padding: $half-spacing;
+  margin-bottom: $default-spacing;
 }

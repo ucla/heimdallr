@@ -31,14 +31,6 @@
   margin-left: 41rem;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
 .full {
   width: 100%;
 }
@@ -51,10 +43,4 @@
 
 .status h2, .account-actions h2 {
   margin-top: 0;
-}
-
-div.core-selected {
-  position: relative;
-  padding: $half-spacing;
-  margin-bottom: $default-spacing;
 }

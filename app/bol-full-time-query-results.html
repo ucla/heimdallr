@@ -48,7 +48,7 @@
           <dt>Deactivation Hold</dt>
           <dd>Holding</dd>
           <dt>BOL Special</dt>
-          <dd>Affiliation	Data Preservation</dd>
+          <dd>Affiliation Data Preservation</dd>
         </dl>
       </labeled-results>
       
@@ -180,33 +180,53 @@
       </paper-tabs>
       
       <core-pages selected="{{selected}}">
+      
         <div>
-          
           <form role="form">
-          	
-          	<fieldset>
-          		<legend>Map UID to Joe Bruin's Account</legend>
-          
-          		<label for="map-an-id--uid" hidden>UID to be mapped</label>
-          		<input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped to Joe Bruin's UCLA Logon" aria-required="true" pattern=".{9}" required autofocus oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
-          		
-          		<div class="inline-label-input"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked><label for="map-an-id--include-email">Copy alternate email address if empty on UID</label></div>
-          
-          		<button class="primary-button" type="submit" name="map-an-id">Try and map it!</button>
-          	</fieldset>
-          	
-          </form>
-          
-          <h3>
+            <legend>Map UID to Joe Bruin's Account</legend>
+        
+            <label for="map-an-id--uid" hidden>UID to be mapped</label>
+            <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped to Joe Bruin's UCLA Logon" aria-required="true" pattern=".{9}" required autofocus oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
             
-          
+            <div class="inline-label-input"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked><label for="map-an-id--include-email">Copy alternate email address if empty on UID</label></div>
+        
+            <button class="primary-button" type="submit" name="map-an-id">Try and map it!</button>
+          </form>
         </div>
-        <div>Page 2</div>
-        <div>Page 3</div>
+        
+        <div>
+          <form id="user-requested-password" role="form">
+            <legend>Change Joe Bruin's Password</legend>
+
+            <label for="pass-requested" hidden>New Password</label>
+            <input id="pass-requested" name="pass-requested" type="password" placeholder="Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+            
+            <label for="pass-requested-confirm" hidden>Confirm New Password</label>
+            <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+  
+            <button class="primary-button" type="submit" name="sso">Change Password</button>
+          </form>
+        </div>
+        
+        <div>
+           <form id="bol-mail-storage" role="form">
+            <legend>Create BOL Mail Storage</legend>
+            
+            <label for="bol-mail-storage-id" hidden>BOL Account</label>
+            <input id="bol-mail-storage-id" name="bol-mail-storage-id" type="password" placeholder="BOL Account" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Account names must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+  
+            <button class="primary-button" type="submit" name="sso">Create BOL Mail Storage for above BOL Account</button>
+          </form>
+        </div>
+        
         <div>Page 4</div>
+        
         <div>Page 5</div>
+        
         <div>Page 6</div>
+        
         <div>Page 7</div>
+        
       </core-pages>
             
     </aside>
