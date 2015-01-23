@@ -182,7 +182,7 @@
       <core-pages selected="{{selected}}">
       
         <div>
-          <form role="form">
+          <form id="map-an-id" role="form">
             <legend>Map UID to Joe Bruin's Account</legend>
         
             <label for="map-an-id--uid" hidden>UID to be mapped</label>
@@ -190,7 +190,7 @@
             
             <div class="inline-label-input"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked><label for="map-an-id--include-email">Copy alternate email address if empty on UID</label></div>
         
-            <button class="primary-button" type="submit" name="map-an-id">Try and map it!</button>
+            <button class="primary-button" type="submit" name="map-an-id-submit">Try and map it!</button>
           </form>
         </div>
         
@@ -204,7 +204,7 @@
             <label for="pass-requested-confirm" hidden>Confirm New Password</label>
             <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
   
-            <button class="primary-button" type="submit" name="sso">Change Password</button>
+            <button class="primary-button" type="submit" name="user-requested-password-submit">Change Password</button>
           </form>
         </div>
         
@@ -215,17 +215,37 @@
             <label for="bol-mail-storage-id" hidden>BOL Account</label>
             <input id="bol-mail-storage-id" name="bol-mail-storage-id" type="password" placeholder="BOL Account" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Account names must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
   
-            <button class="primary-button" type="submit" name="sso">Create BOL Mail Storage for above BOL Account</button>
+            <button class="primary-button" type="submit" name="bol-mail-storage-submit">Create BOL Mail Storage for above BOL Account</button>
           </form>
         </div>
         
-        <div>Page 4</div>
+        <div>
+          <form id="bol-services" role="form">
+            <legend>Manage BOL Services for Joe Bruin</legend>
+              <label class="for-checkbox"><input type="checkbox" value="bol-email">bol-email</label>
+              <label class="for-checkbox"><input type="checkbox" value="bolsoftware">bolsoftware</label>
+              <label class="for-checkbox"><input type="checkbox" value="ftp">ftp</label>
+              <label class="for-checkbox"><input type="checkbox" value="proxy">proxy</label>
+              <label class="for-checkbox"><input type="checkbox" value="radius">radius</label>
+              <label class="for-checkbox"><input type="checkbox" value="migrate">migrate</label>
+              <label class="for-checkbox"><input type="checkbox" value="googleapps">googleapps</label>
+              <label class="for-checkbox"><input type="checkbox" value="xmpp">xmpp</label>
+              
+              <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save BOL Services</button>
+          </form>
+        </div>
         
-        <div>Page 5</div>
+        <div>
+          
+        </div>
         
-        <div>Page 6</div>
+        <div>
+          
+        </div>
         
-        <div>Page 7</div>
+        <div>
+          TBD
+        </div>
         
       </core-pages>
             

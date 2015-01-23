@@ -75,6 +75,18 @@ legend {
   color: $primary-color;
 }
 
+label {
+  margin: 0.5em 0 0.2em;
+}
+
+.for-checkbox, .for-radio {
+  display: block;
+  input {
+    margin-right: $half-spacing;
+    width: auto;
+  }
+}
+
 button, .button {
   width: 100%;
   @include breakpoint($multi-column) {

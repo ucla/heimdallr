@@ -15,7 +15,7 @@ td, th {
 }
 
  thead {
-  background-color: #e0e0e0;
+  background-color: lighten($neutral, 14%);
   color: #000;
   text-align: left;
   vertical-align: bottom;
