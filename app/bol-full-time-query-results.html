@@ -236,11 +236,71 @@
         </div>
         
         <div>
-          
+          <form id="affiliation" role="form">
+            <legend>Manage Affiliation</legend>
+            
+            <p><span class="label">Current Affiliation:</span> None</p>
+            
+            <label for="affselect">Set/Change Affiliation:</label>
+              <select id="affselect">
+                <option value="None" >None</option>
+                <option value="Visiting Scholar" >Visiting Scholar</option>
+                <option value="Visiting Graduate Researcher" >Visiting Graduate Researcher</option>
+                <option value="Departmental email account" >Departmental email account</option>
+                <option value="Affiliate email account" >Affiliate email account</option>
+                <option value="Affiliate email account (+web hosting)" >Affiliate email account (+web hosting)</option>
+                <option value="Independent Contractor" >Independent Contractor</option>
+                <option value="Spouse of deceased faculty member" >Spouse of deceased faculty member</option>
+                <option value="ASUCLA" >ASUCLA</option>
+                <option value="Library retiree" >Library retiree</option>
+                <option value="UCLA/UCR School of Medicine student" >UCLA/UCR School of Medicine student</option>
+                <option value="Howard Hughes Medical Institute employee" >Howard Hughes Medical Institute employee</option>
+                <option value="Data Preservation">Data Preservation</option>
+              </select>
+            
+            <label for="expirationfield">Expiration:</label>
+            <input type="date" id="expirationfield" value="None" />
+            
+            <label for="expirationfield">Departmental Approver:</label>
+            <fieldset>
+              <input type="text" class="name" name="name" value="Barr Foo" />
+  						<input type="text" class="email" name="email" value="foo@ucla.edu" />
+  						<input type="text" class="phone" name="phone" value="54321" />
+            </fieldset>
+            
+            <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save Affiliation Changes</button>
+          </form>
         </div>
         
         <div>
-          
+          <form id="affiliation" role="form">
+            <legend>Deactivation hold</legend>
+            
+          	<button id="dhadd" class="btn disabled" disabled="disabled">Add</button>
+          	<button id="dhremove" class="btn disabled" disabled="disabled">Remove</button>
+          	
+          	<button id="dhcancel" class="btn disabled" disabled="disabled">Clear Changes</button>
+          	<button id="dhsave" class="btn primary disabled" disabled="disabled">Save</button>
+
+          <p><span class="label">Status</span> <span class="holding">Holding</span> (last modified 10 months ago by Henry)</p>
+          <tr class="dhfield"><td class="field">Ends</td><td><input type="text" id="dhendfield" class="ajaxdatefield" value="" /></td></tr>
+          <tr class="dhfield"><td class="field">Type</td><td>
+          	<select id="dhtypeselect">
+          		<option value="Spouse access">Spouse access</option>
+          		<option value="Other (see reason)" selected="selected">Other (see reason)</option>
+          	</select>
+          <tr class="dhfield"><td class="field">Maintain</td><td id="dhmaintain">
+          	<span id="dhemail" class="service admin">Email</span>
+          	<span id="dhwebhosting" class="service admin">Web hosting</span>
+          	<span id="dhproxyvpn" class="service admin">Proxy/VPN</span>
+          	<span class="dateformat">click to select services</span>
+          </td></tr>
+          <tr class="dhfield"><td class="field">Reason</td><td><textarea id="dhreasonfield" rows="3" cols="40"></textarea></td></tr>
+          </tbody></table>
+            
+            
+            <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save Affiliation Changes</button>
+          </form>
         </div>
         
         <div>
