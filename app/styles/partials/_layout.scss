@@ -1,4 +1,4 @@
-.home section[role="main"] {
+.home div[role="main"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,14 +8,14 @@
   margin: auto;
 }
 
-.full-time section[role="main"] {
+.full-time div[role="main"] {
   display: block;
   width: 98%;
   margin: 0 auto;
   flex: 1 0 auto;
 }
 
-.part-time section[role="main"] {
+.part-time div[role="main"] {
   display: block;
   width: 41rem;
   margin: 0 auto;
@@ -29,6 +29,8 @@
 
 .account-actions {
   margin-left: 41rem;
+  position: sticky;
+  top: 10px;
 }
 
 .full {
@@ -41,6 +43,20 @@
   }
 }
 
+.back {
+  text-decoration: none;
+  font-size: 3.5rem;
+}
+
 .status h2, .account-actions h2 {
   margin-top: 0;
+}
+
+core-pages {
+  section {
+    width: 50%;
+  }
+  submit-confirmation {
+    
+  }
 }

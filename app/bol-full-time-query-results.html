@@ -33,14 +33,14 @@
     </aside>
   </ucla-header>
   
-  <section role="main">
+  <div role="main">
     
     <header>
-      <h1>Manage Joe Bruin's Identity <a href="/">(or someone else's)</a></h1>
+      <h1><a href="/" class="back" alt="Back to search">&laquo;</a> Manage Joe Bruin's Identity</h1>
     </header>
       
     <article class="query-results">
-    
+          
       <labeled-results class="status">
         <h2>BOL Account Flags</h2>
         
@@ -103,7 +103,7 @@
       </labeled-results>
       
       <labeled-results>
-        <h2>Recent Account Changes</h2>
+        <h2>Recent Account Changes <a href="#">(view all)</a></h2>
         
         <dl>
           <dt>November 18, 2014</dt>
@@ -169,149 +169,170 @@
     
     <aside class="account-actions">
       
-      <paper-tabs selected="{{selected}}" noink>
+      <paper-tabs selected="0" noink>
         <paper-tab>Map an ID</paper-tab>
         <paper-tab>Change Password</paper-tab>
-        <paper-tab>Mail Storage</paper-tab>
+        <paper-tab>Mail</paper-tab>
         <paper-tab>BOL Services</paper-tab>
         <paper-tab>Set Affiliation</paper-tab>
         <paper-tab>Manage Holds</paper-tab>
-        <paper-tab>Audit History</paper-tab>
       </paper-tabs>
       
       <core-pages selected="{{selected}}">
       
         <div>
-          <form id="map-an-id" role="form">
-            <legend>Map UID to Joe Bruin's Account</legend>
-        
-            <label for="map-an-id--uid" hidden>UID to be mapped</label>
-            <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped to Joe Bruin's UCLA Logon" aria-required="true" pattern=".{9}" required autofocus oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
-            
-            <div class="inline-label-input"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked><label for="map-an-id--include-email">Copy alternate email address if empty on UID</label></div>
-        
-            <button class="primary-button" type="submit" name="map-an-id-submit">Try and map it!</button>
-          </form>
-        </div>
-        
-        <div>
-          <form id="user-requested-password" role="form">
-            <legend>Change Joe Bruin's Password</legend>
-
-            <label for="pass-requested" hidden>New Password</label>
-            <input id="pass-requested" name="pass-requested" type="password" placeholder="Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
-            
-            <label for="pass-requested-confirm" hidden>Confirm New Password</label>
-            <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
-  
-            <button class="primary-button" type="submit" name="user-requested-password-submit">Change Password</button>
-          </form>
-        </div>
-        
-        <div>
-           <form id="bol-mail-storage" role="form">
-            <legend>Create BOL Mail Storage</legend>
-            
-            <label for="bol-mail-storage-id" hidden>BOL Account</label>
-            <input id="bol-mail-storage-id" name="bol-mail-storage-id" type="password" placeholder="BOL Account" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Account names must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
-  
-            <button class="primary-button" type="submit" name="bol-mail-storage-submit">Create BOL Mail Storage for above BOL Account</button>
-          </form>
-        </div>
-        
-        <div>
-          <form id="bol-services" role="form">
-            <legend>Manage BOL Services for Joe Bruin</legend>
-              <label class="for-checkbox"><input type="checkbox" value="bol-email">bol-email</label>
-              <label class="for-checkbox"><input type="checkbox" value="bolsoftware">bolsoftware</label>
-              <label class="for-checkbox"><input type="checkbox" value="ftp">ftp</label>
-              <label class="for-checkbox"><input type="checkbox" value="proxy">proxy</label>
-              <label class="for-checkbox"><input type="checkbox" value="radius">radius</label>
-              <label class="for-checkbox"><input type="checkbox" value="migrate">migrate</label>
-              <label class="for-checkbox"><input type="checkbox" value="googleapps">googleapps</label>
-              <label class="for-checkbox"><input type="checkbox" value="xmpp">xmpp</label>
+          <section>
+            <form id="map-an-id" role="form">
+              <legend>Map UID to Joe Bruin's Account</legend>
+          
+              <label for="map-an-id--uid" hidden>UID to be mapped</label>
+              <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped" aria-required="true" pattern=".{9}" required  oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
               
-              <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save BOL Services</button>
+              <div class="inline-label-input"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked><label for="map-an-id--include-email">Copy alternate email address if empty on UID</label></div>
+          
+              <button class="primary-button" type="submit" name="map-an-id-submit">Try and map it!</button>
+            </form>
+          </section>
+          <submit-confirmation>
+          
+          </submit-confirmation>
+        </div>
+        
+        <div>
+          <section>
+            <form id="user-requested-password" role="form">
+              <legend>Change Joe Bruin's Password</legend>
+  
+              <label for="pass-requested" hidden>New Password</label>
+              <input id="pass-requested" name="pass-requested" type="password" placeholder="Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+              
+              <label for="pass-requested-confirm" hidden>Confirm New Password</label>
+              <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+    
+              <button class="primary-button" type="submit" name="user-requested-password-submit">Change Password</button>
+            </form>
+           </section>
+          <submit-confirmation>
+          
+          </submit-confirmation>
+        </div>
+        
+        <div>
+          <form id="mail-routing" role="form">
+            <legend>Create BOL Mail Storage</legend>
+            <button class="primary-button" type="submit" name="bol-mail-storage-submit">Create BOL Mail Storage</button>
+          </form>
+          <hr>
+           <form id="bol-mail-storage" role="form">
+            <legend hidden>Create BOL Mail Storage</legend>
+            <button class="primary-button" type="submit" name="bol-mail-storage-submit">Create BOL Mail Storage</button>
           </form>
         </div>
         
         <div>
-          <form id="affiliation" role="form">
-            <legend>Manage Affiliation</legend>
-            
-            <p><span class="label">Current Affiliation:</span> None</p>
-            
-            <label for="affselect">Set/Change Affiliation:</label>
-              <select id="affselect">
-                <option value="None" >None</option>
-                <option value="Visiting Scholar" >Visiting Scholar</option>
-                <option value="Visiting Graduate Researcher" >Visiting Graduate Researcher</option>
-                <option value="Departmental email account" >Departmental email account</option>
-                <option value="Affiliate email account" >Affiliate email account</option>
-                <option value="Affiliate email account (+web hosting)" >Affiliate email account (+web hosting)</option>
-                <option value="Independent Contractor" >Independent Contractor</option>
-                <option value="Spouse of deceased faculty member" >Spouse of deceased faculty member</option>
-                <option value="ASUCLA" >ASUCLA</option>
-                <option value="Library retiree" >Library retiree</option>
-                <option value="UCLA/UCR School of Medicine student" >UCLA/UCR School of Medicine student</option>
-                <option value="Howard Hughes Medical Institute employee" >Howard Hughes Medical Institute employee</option>
-                <option value="Data Preservation">Data Preservation</option>
-              </select>
-            
-            <label for="expirationfield">Expiration:</label>
-            <input type="date" id="expirationfield" value="None" />
-            
-            <label for="expirationfield">Departmental Approver:</label>
-            <fieldset>
-              <input type="text" class="name" name="name" value="Barr Foo" />
-  						<input type="text" class="email" name="email" value="foo@ucla.edu" />
-  						<input type="text" class="phone" name="phone" value="54321" />
-            </fieldset>
-            
-            <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save Affiliation Changes</button>
-          </form>
+          <section>
+            <form id="bol-services" role="form">
+              <legend>Manage BOL Services for Joe Bruin</legend>
+                <label class="for-checkbox"><input type="checkbox" value="bol-email">bol-email</label>
+                <label class="for-checkbox"><input type="checkbox" value="bolsoftware">bolsoftware</label>
+                <label class="for-checkbox"><input type="checkbox" value="ftp">ftp</label>
+                <label class="for-checkbox"><input type="checkbox" value="proxy">proxy</label>
+                <label class="for-checkbox"><input type="checkbox" value="radius">radius</label>
+                <label class="for-checkbox"><input type="checkbox" value="migrate">migrate</label>
+                <label class="for-checkbox"><input type="checkbox" value="googleapps">googleapps</label>
+                <label class="for-checkbox"><input type="checkbox" value="xmpp">xmpp</label>
+                
+                <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save BOL Services</button>
+            </form>
+          </section>
+          <submit-confirmation>
+          
+          </submit-confirmation>
         </div>
         
         <div>
-          <form id="affiliation" role="form">
-            <legend>Deactivation hold</legend>
-            
-          	<button id="dhadd" class="btn disabled" disabled="disabled">Add</button>
-          	<button id="dhremove" class="btn disabled" disabled="disabled">Remove</button>
-          	
-          	<button id="dhcancel" class="btn disabled" disabled="disabled">Clear Changes</button>
-          	<button id="dhsave" class="btn primary disabled" disabled="disabled">Save</button>
-
-          <p><span class="label">Status</span> <span class="holding">Holding</span> (last modified 10 months ago by Henry)</p>
-          <tr class="dhfield"><td class="field">Ends</td><td><input type="text" id="dhendfield" class="ajaxdatefield" value="" /></td></tr>
-          <tr class="dhfield"><td class="field">Type</td><td>
-          	<select id="dhtypeselect">
-          		<option value="Spouse access">Spouse access</option>
-          		<option value="Other (see reason)" selected="selected">Other (see reason)</option>
-          	</select>
-          <tr class="dhfield"><td class="field">Maintain</td><td id="dhmaintain">
-          	<span id="dhemail" class="service admin">Email</span>
-          	<span id="dhwebhosting" class="service admin">Web hosting</span>
-          	<span id="dhproxyvpn" class="service admin">Proxy/VPN</span>
-          	<span class="dateformat">click to select services</span>
-          </td></tr>
-          <tr class="dhfield"><td class="field">Reason</td><td><textarea id="dhreasonfield" rows="3" cols="40"></textarea></td></tr>
-          </tbody></table>
-            
-            
-            <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save Affiliation Changes</button>
-          </form>
+          <section>
+            <form id="affiliation" role="form">
+              <legend>Manage Affiliation</legend>
+              
+              <p><span class="label">Current Affiliation:</span> None</p>
+              
+              <label for="affselect">Set/Change Affiliation:</label>
+                <select id="affselect">
+                  <option value="None" >None</option>
+                  <option value="Visiting Scholar" >Visiting Scholar</option>
+                  <option value="Visiting Graduate Researcher" >Visiting Graduate Researcher</option>
+                  <option value="Departmental email account" >Departmental email account</option>
+                  <option value="Affiliate email account" >Affiliate email account</option>
+                  <option value="Affiliate email account (+web hosting)" >Affiliate email account (+web hosting)</option>
+                  <option value="Independent Contractor" >Independent Contractor</option>
+                  <option value="Spouse of deceased faculty member" >Spouse of deceased faculty member</option>
+                  <option value="ASUCLA" >ASUCLA</option>
+                  <option value="Library retiree" >Library retiree</option>
+                  <option value="UCLA/UCR School of Medicine student" >UCLA/UCR School of Medicine student</option>
+                  <option value="Howard Hughes Medical Institute employee" >Howard Hughes Medical Institute employee</option>
+                  <option value="Data Preservation">Data Preservation</option>
+                </select>
+              
+              <label for="expirationfield">Expiration:</label>
+              <input type="date" id="expirationfield" value="None" />
+              
+              <label for="expirationfield">Departmental Approver:</label>
+              <fieldset>
+                <input type="text" class="name" name="name" value="Barr Foo" />
+    						<input type="text" class="email" name="email" value="foo@ucla.edu" />
+    						<input type="text" class="phone" name="phone" value="54321" />
+              </fieldset>
+              
+              <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save Affiliation Changes</button>
+            </form>
+          </section>
+          <submit-confirmation>
+          
+          </submit-confirmation>
         </div>
         
         <div>
-          TBD
+          <section>
+            <form id="affiliation" role="form">
+              <legend>Deactivation hold</legend>
+              
+            	<button id="dhadd" class="btn disabled" disabled="disabled">Add</button>
+            	<button id="dhremove" class="btn disabled" disabled="disabled">Remove</button>
+            	
+            	<button id="dhcancel" class="btn disabled" disabled="disabled">Clear Changes</button>
+            	<button id="dhsave" class="btn primary disabled" disabled="disabled">Save</button>
+  
+            <p><span class="label">Status</span> <span class="holding">Holding</span> (last modified 10 months ago by Henry)</p>
+            <tr class="dhfield"><td class="field">Ends</td><td><input type="text" id="dhendfield" class="ajaxdatefield" value="" /></td></tr>
+            <tr class="dhfield"><td class="field">Type</td><td>
+            	<select id="dhtypeselect">
+            		<option value="Spouse access">Spouse access</option>
+            		<option value="Other (see reason)" selected="selected">Other (see reason)</option>
+            	</select>
+            <tr class="dhfield"><td class="field">Maintain</td><td id="dhmaintain">
+            	<span id="dhemail" class="service admin">Email</span>
+            	<span id="dhwebhosting" class="service admin">Web hosting</span>
+            	<span id="dhproxyvpn" class="service admin">Proxy/VPN</span>
+            	<span class="dateformat">click to select services</span>
+            </td></tr>
+            <tr class="dhfield"><td class="field">Reason</td><td><textarea id="dhreasonfield" rows="3" cols="40"></textarea></td></tr>
+            </tbody></table>
+              
+              
+              <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save Affiliation Changes</button>
+            </form>
+          </section>
+          <submit-confirmation>
+          
+          </submit-confirmation>
         </div>
         
       </core-pages>
             
     </aside>
 
-  </section>
+  </div>
   
   <ucla-footer>
     <p><a href="#">Privacy, Security &amp; Legal</a> <span>Loaded: 2014-12-05 20:57:26 +0000</span></p>
