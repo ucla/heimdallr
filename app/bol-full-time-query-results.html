@@ -172,9 +172,9 @@
       <paper-tabs selected="0" noink>
         <paper-tab>Map an ID</paper-tab>
         <paper-tab>Change Password</paper-tab>
-        <paper-tab>Email</paper-tab>
+        <paper-tab>Email Related</paper-tab>
         <paper-tab>BOL Services</paper-tab>
-        <paper-tab>Set Affiliation</paper-tab>
+        <paper-tab>Manage Affiliation</paper-tab>
         <paper-tab>Manage Holds</paper-tab>
       </paper-tabs>
       
@@ -315,24 +315,25 @@
         <div>
           <section>
             <form id="affiliation" role="form">
-              <legend>Deactivation hold</legend>
-              
-            <p><span class="label">Status</span> <span class="holding">Holding</span> (last modified 10 months ago by Henry)</p>
-            <tr class="dhfield"><td class="field">Ends</td><td><input type="text" id="dhendfield" class="ajaxdatefield" value="" /></td></tr>
-            <tr class="dhfield"><td class="field">Type</td><td>
+              <legend>Manage Service Holds</legend>
+                          
+              <label for"dhendfield">Hold Ends On:</label>
+              <input type="text" id="dhendfield" class="ajaxdatefield" value="">
+            
+              <label for="dhtypeselect">Type of Hold:</label>  
               <select id="dhtypeselect">
                 <option value="Spouse access">Spouse access</option>
                 <option value="Other (see reason)" selected="selected">Other (see reason)</option>
               </select>
-            <tr class="dhfield"><td class="field">Maintain</td><td id="dhmaintain">
-              <span id="dhemail" class="service admin">Email</span>
-              <span id="dhwebhosting" class="service admin">Web hosting</span>
-              <span id="dhproxyvpn" class="service admin">Proxy/VPN</span>
-              <span class="dateformat">click to select services</span>
-            </td></tr>
-            <tr class="dhfield"><td class="field">Reason</td><td><textarea id="dhreasonfield" rows="3" cols="40"></textarea></td></tr>
-            </tbody></table>
               
+              <p>Services on Hold:</p>
+              
+              <label class="for-checkbox"><input type="checkbox" value="email">Email</label>
+              <label class="for-checkbox"><input type="checkbox" value="googleapps">Web hosting</label>
+              <label class="for-checkbox"><input type="checkbox" value="proxyvpn">Proxy/VPN</label>
+                
+              <label for="dhreasonfield">Reason:</label>
+              <textarea id="dhreasonfield" rows="3" cols="40"></textarea>
               
               <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save Affiliation Changes</button>
             </form>
