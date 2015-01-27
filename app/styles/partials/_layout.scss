@@ -1,3 +1,5 @@
+// overall layout
+
 .home div[role="main"] {
   display: flex;
   flex-direction: column;
@@ -33,14 +35,10 @@
   top: 10px;
 }
 
+// misc classes 
+
 .full {
   width: 100%;
-}
-
-.inline-label-input {
-  input {
-    width: 1.5rem;
-  }
 }
 
 .back {
@@ -48,15 +46,57 @@
   font-size: 3.5rem;
 }
 
+// actions
+
+.inline-label-input {
+  input {
+    width: 1.5rem;
+  }
+}
+
 .status h2, .account-actions h2 {
   margin-top: 0;
 }
 
 core-pages {
+  div {
+    margin-top: 1rem;
+  }
   section {
     width: 50%;
   }
   submit-confirmation {
-    
+     margin-left: 50%;
+  }
+}
+
+// -------- or --------
+
+.line-thru {
+  display: block;
+  margin: 1rem 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  &:before {
+    width: 40px;
+    height: 10px;
+    background-color: #fff;
+    content: '';
+    margin: -5px 0 0 -20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+  }
+  &:after {
+    border-bottom: 1px solid lighten($neutral, 13%);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 49%;
+    width: 100%;
+    z-index: -2;
   }
 }

@@ -36,7 +36,7 @@
   <div role="main">
     
     <header>
-      <h1><a href="/" class="back" alt="Back to search">&laquo;</a> Manage Joe Bruin's Identity</h1>
+      <h1><a href="/" class="back" title="Search for someone else">&laquo;</a> Manage Joe Bruin's Identity</h1>
     </header>
       
     <article class="query-results">
@@ -172,7 +172,7 @@
       <paper-tabs selected="0" noink>
         <paper-tab>Map an ID</paper-tab>
         <paper-tab>Change Password</paper-tab>
-        <paper-tab>Mail</paper-tab>
+        <paper-tab>Email</paper-tab>
         <paper-tab>BOL Services</paper-tab>
         <paper-tab>Set Affiliation</paper-tab>
         <paper-tab>Manage Holds</paper-tab>
@@ -188,7 +188,7 @@
               <label for="map-an-id--uid" hidden>UID to be mapped</label>
               <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped" aria-required="true" pattern=".{9}" required  oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
               
-              <div class="inline-label-input"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked><label for="map-an-id--include-email">Copy alternate email address if empty on UID</label></div>
+              <div class="for-checkbox"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked><label for="map-an-id--include-email">Copy alternate email address if empty on UID</label></div>
           
               <button class="primary-button" type="submit" name="map-an-id-submit">Try and map it!</button>
             </form>
@@ -218,15 +218,33 @@
         </div>
         
         <div>
-          <form id="mail-routing" role="form">
-            <legend>Create BOL Mail Storage</legend>
-            <button class="primary-button" type="submit" name="bol-mail-storage-submit">Create BOL Mail Storage</button>
-          </form>
-          <hr>
-           <form id="bol-mail-storage" role="form">
-            <legend hidden>Create BOL Mail Storage</legend>
-            <button class="primary-button" type="submit" name="bol-mail-storage-submit">Create BOL Mail Storage</button>
-          </form>
+          <section>
+            <form id="alt-email-address" role="form">
+              <legend>Set an alternate email address</legend>
+              
+              <label for="alt-email-address-input" hidden>Alternate Email Address</label>
+              <input id="alt-email-address-input" name="alt-email-address-input" type="email" placeholder="Alternate Email Address" aria-required="true" required>
+              
+              <button class="primary-button" type="submit" name="bol-mail-storage-submit">Set Alternate Email Address</button>
+            </form>
+            <strong class="line-thru">or</strong>
+            <form id="routing-address" role="form">
+              <legend>Set routing address</legend>
+              
+              <label for="routing-address-input" hidden>Routing Address</label>
+              <input id="routing-address-input" name="routing-address-input" type="email" placeholder="Routing Address" aria-required="true" required>
+              
+              <button class="primary-button" type="submit" name="routing-address-submit">Set Routing Address</button>
+            </form>
+            <strong class="line-thru">or</strong>
+            <form id="bol-mail-storage" role="form">
+              <legend>Create BOL Mail Storage</legend>
+              <button class="primary-button" type="submit" name="bol-mail-storage-submit">Create BOL Mail Storage</button>
+            </form>
+          </section>
+          <submit-confirmation>
+          
+          </submit-confirmation>
         </div>
         
         <div>
@@ -255,33 +273,35 @@
             <form id="affiliation" role="form">
               <legend>Manage Affiliation</legend>
               
-              <p><span class="label">Current Affiliation:</span> None</p>
-              
-              <label for="affselect">Set/Change Affiliation:</label>
+              <label for="affselect">Affiliation:</label>
                 <select id="affselect">
-                  <option value="None" >None</option>
-                  <option value="Visiting Scholar" >Visiting Scholar</option>
-                  <option value="Visiting Graduate Researcher" >Visiting Graduate Researcher</option>
-                  <option value="Departmental email account" >Departmental email account</option>
-                  <option value="Affiliate email account" >Affiliate email account</option>
-                  <option value="Affiliate email account (+web hosting)" >Affiliate email account (+web hosting)</option>
-                  <option value="Independent Contractor" >Independent Contractor</option>
-                  <option value="Spouse of deceased faculty member" >Spouse of deceased faculty member</option>
-                  <option value="ASUCLA" >ASUCLA</option>
-                  <option value="Library retiree" >Library retiree</option>
-                  <option value="UCLA/UCR School of Medicine student" >UCLA/UCR School of Medicine student</option>
-                  <option value="Howard Hughes Medical Institute employee" >Howard Hughes Medical Institute employee</option>
+                  <option value="None">None</option>
+                  <option value="Visiting Scholar">Visiting Scholar</option>
+                  <option value="Visiting Graduate Researcher">Visiting Graduate Researcher</option>
+                  <option value="Departmental email account">Departmental email account</option>
+                  <option value="Affiliate email account" selected="yes">Affiliate email account</option>
+                  <option value="Affiliate email account (+web hosting)">Affiliate email account (+web hosting)</option>
+                  <option value="Independent Contractor">Independent Contractor</option>
+                  <option value="Spouse of deceased faculty member">Spouse of deceased faculty member</option>
+                  <option value="ASUCLA">ASUCLA</option>
+                  <option value="Library retiree">Library retiree</option>
+                  <option value="UCLA/UCR School of Medicine student">UCLA/UCR School of Medicine student</option>
+                  <option value="Howard Hughes Medical Institute employee">Howard Hughes Medical Institute employee</option>
                   <option value="Data Preservation">Data Preservation</option>
                 </select>
               
-              <label for="expirationfield">Expiration:</label>
-              <input type="date" id="expirationfield" value="None" />
+              <label for="expirationfield">Affiliate Expiration:</label>
+              <input type="date" id="expirationfield" placeholder="Affiliation Expires On" value="None" />
               
-              <label for="expirationfield">Departmental Approver:</label>
+              <p><b>Departmental Approver:</b></p>
+              
               <fieldset>
-                <input type="text" class="name" name="name" value="Barr Foo" />
-    						<input type="text" class="email" name="email" value="foo@ucla.edu" />
-    						<input type="text" class="phone" name="phone" value="54321" />
+                <label for="approver-name-1">Approver's Name:</label>
+                <input type="text" name="approver-name-1" id="approver-name-1" placeholder="Approver's Name" value="Barr Foo">
+                <label for="approver-email-1">Approver's Email:</label>
+                <input type="email" name="approver-email-1" id="approver-email-1" placeholder="Approver's Email" value="foo@ucla.edu">
+                <label for="approver-phone-1">Approver's Phone:</label>
+                <input type="tel" name="approver-phone-1" id="approver-phone-1" placeholder="Approver's Phone" value="54321">
               </fieldset>
               
               <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save Affiliation Changes</button>
@@ -297,24 +317,18 @@
             <form id="affiliation" role="form">
               <legend>Deactivation hold</legend>
               
-            	<button id="dhadd" class="btn disabled" disabled="disabled">Add</button>
-            	<button id="dhremove" class="btn disabled" disabled="disabled">Remove</button>
-            	
-            	<button id="dhcancel" class="btn disabled" disabled="disabled">Clear Changes</button>
-            	<button id="dhsave" class="btn primary disabled" disabled="disabled">Save</button>
-  
             <p><span class="label">Status</span> <span class="holding">Holding</span> (last modified 10 months ago by Henry)</p>
             <tr class="dhfield"><td class="field">Ends</td><td><input type="text" id="dhendfield" class="ajaxdatefield" value="" /></td></tr>
             <tr class="dhfield"><td class="field">Type</td><td>
-            	<select id="dhtypeselect">
-            		<option value="Spouse access">Spouse access</option>
-            		<option value="Other (see reason)" selected="selected">Other (see reason)</option>
-            	</select>
+              <select id="dhtypeselect">
+                <option value="Spouse access">Spouse access</option>
+                <option value="Other (see reason)" selected="selected">Other (see reason)</option>
+              </select>
             <tr class="dhfield"><td class="field">Maintain</td><td id="dhmaintain">
-            	<span id="dhemail" class="service admin">Email</span>
-            	<span id="dhwebhosting" class="service admin">Web hosting</span>
-            	<span id="dhproxyvpn" class="service admin">Proxy/VPN</span>
-            	<span class="dateformat">click to select services</span>
+              <span id="dhemail" class="service admin">Email</span>
+              <span id="dhwebhosting" class="service admin">Web hosting</span>
+              <span id="dhproxyvpn" class="service admin">Proxy/VPN</span>
+              <span class="dateformat">click to select services</span>
             </td></tr>
             <tr class="dhfield"><td class="field">Reason</td><td><textarea id="dhreasonfield" rows="3" cols="40"></textarea></td></tr>
             </tbody></table>

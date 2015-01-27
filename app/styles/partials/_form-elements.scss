@@ -57,6 +57,11 @@ select:focus:invalid:focus {
 select {
   border: 1px solid $neutral;
   background-color: $white;
+  display: block;
+}
+
+select[multiple] {
+  height: auto;
 }
 
 fieldset {
@@ -66,7 +71,7 @@ fieldset {
 }
 
 legend {
-  font-size: $h3-font-size;
+  font-size: $h2-font-size;
   line-height: $base-line-height * 1.1;
   margin-bottom: $half-spacing;
   display: block;
@@ -76,11 +81,12 @@ legend {
 }
 
 label {
-  margin: 0.5em 0 0.2em;
+  margin: $half-spacing 0;
 }
 
 .for-checkbox, .for-radio {
   display: block;
+  margin: 0;
   input {
     margin-right: $half-spacing;
     width: auto;
