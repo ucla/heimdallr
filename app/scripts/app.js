@@ -15,3 +15,7 @@
 // wrap document so it plays nice with other libraries
 // http://www.polymer-project.org/platform/shadow-dom.html#wrappers
 })(wrap(document));
+
+$(document).ready(function(){
+  $(".account-actions").sticky({topSpacing:10});
+});
