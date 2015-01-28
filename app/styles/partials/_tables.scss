@@ -15,7 +15,7 @@ td, th {
 }
 
  thead {
-  background-color: lighten($neutral, 14%);
+  background-color: lighten($neutral, 9%);
   color: #000;
   text-align: left;
   vertical-align: bottom;
@@ -23,5 +23,5 @@ td, th {
 
 /* nth-child selector for modern browsers */
 tr:nth-child(2n-1) td {
-  background-color: #f2f2f2;
+  background-color: lighten($neutral, 14%);
 }
