@@ -89,7 +89,9 @@ label {
   margin: 0;
   input {
     margin-right: $half-spacing;
+    margin-bottom: 0;
     width: auto;
+    vertical-align: -1px;
   }
 }
 

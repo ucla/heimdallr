@@ -40,43 +40,46 @@
     <form method="get" id="queue-management"></form>
     
     <table>
+      
       <thead>
         <tr>
           <th>Ignore</th>
           <th>Change</th>
           <th>Reject</th>
-          <th>for</th>
-          <th>requested by</th>
-          <th>at</th>
+          <th>For Account</th>
+          <th>Requested By</th>
+          <th>At the Time of</th>
         </tr>
       </thead>
       
-      <tr>
-        <td><input type="radio" value="ignore" name="action1" form="queue-management"></td>
-        <td><input type="radio" value="change" name="action1" form="queue-management"></td>
-        <td><input type="radio" value="reject" name="action1" form="queue-management"></td>
-        <td>jbruin</td>
-        <td>someone</td>
-        <td>2014-12-05 20:57:26 +0000</td>
-      </tr>
-      
-      <tr>
-        <td><input type="radio" value="ignore" name="action2" form="queue-management"></td>
-        <td><input type="radio" value="change" name="action2" form="queue-management"></td>
-        <td><input type="radio" value="reject" name="action2" form="queue-management"></td>
-        <td>barbruin</td>
-        <td>someone else</td>
-        <td>2014-12-05 20:57:26 +0000</td>
-      </tr>
-
-      <tr>
-        <td><input type="radio" value="ignore" name="action3" form="queue-management"></td>
-        <td><input type="radio" value="change" name="action3" form="queue-management"></td>
-        <td><input type="radio" value="reject" name="action3" form="queue-management"></td>
-        <td>foobruin</td>
-        <td>someone</td>
-        <td>2014-12-05 20:57:26 +0000</td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><label class="for-checkbox"><input type="radio" value="ignore" name="action1" form="queue-management">Ignore</label></td>
+          <td><label class="for-checkbox"><input type="radio" value="change" name="action1" form="queue-management">Change</label></td>
+          <td><label class="for-checkbox"><input type="radio" value="reject" name="action1" form="queue-management">Reject</label></td>
+          <td>jbruin</td>
+          <td>someone</td>
+          <td>2014-12-05 20:57:26 </td>
+        </tr>
+        
+        <tr>
+          <td><label class="for-checkbox"><input type="radio" value="ignore" name="action2" form="queue-management">Ignore</label></td>
+          <td><label class="for-checkbox"><input type="radio" value="change" name="action2" form="queue-management">Change</label></td>
+          <td><label class="for-checkbox"><input type="radio" value="reject" name="action2" form="queue-management">Reject</label></td>
+          <td>barbruin</td>
+          <td>someone else</td>
+          <td>2014-12-05 20:57:26 </td>
+        </tr>
+  
+        <tr>
+          <td><label class="for-checkbox"><input type="radio" value="ignore" name="action3" form="queue-management">Ignore</label></td>
+          <td><label class="for-checkbox"><input type="radio" value="change" name="action3" form="queue-management">Change</label></td>
+          <td><label class="for-checkbox"><input type="radio" value="reject" name="action3" form="queue-management">Reject</label></td>
+          <td>foobruin</td>
+          <td>someone</td>
+          <td>2014-12-05 20:57:26 </td>
+        </tr>
+      </tbody>
       
     </table>
     

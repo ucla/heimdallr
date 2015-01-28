@@ -1,27 +1,47 @@
 table {
+  border-collapse: separate;
+  background: $white;
+  border-radius: $global-border-radius;
   margin: $default-spacing 0;
+  border: 1px solid $neutral;
 }
 
-td, th {
-  font-size: inherit;
-  margin: 0;
-  overflow: visible; /*to make ths where the title is really long work*/
-  padding: 0.5em 1em; /* cell padding */
+thead {
+  border-radius: $global-border-radius;
 }
 
- td:first-child,
- th:first-child {
- border-left-width: 0;
-}
-
- thead {
-  background-color: lighten($neutral, 9%);
-  color: #000;
+thead th {
+  font-size: $p-font-size;
+  font-weight: bold;
+  color: $white;
+  @include text-shadow(1px 1px 0px rgba(0,0,0,0.5));
   text-align: left;
-  vertical-align: bottom;
+  padding: 20px;
+  background: $primary-color;
+  &:first-child {
+   border-top-left-radius: $global-border-radius;; 
+  }
+  &:last-child {
+    border-top-right-radius: $global-border-radius;;
+  }
 }
 
-/* nth-child selector for modern browsers */
-tr:nth-child(2n-1) td {
-  background-color: lighten($neutral, 14%);
+tbody tr td {
+  font-weight: 400;
+  font-size: $meta-font-size;
+  padding: $default-spacing;
+}
+
+tbody tr:nth-child(2n) {
+  background: lighten($neutral, 14%);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+  &:first-child {
+    border-bottom-left-radius: $global-border-radius;
+  }
+  &:last-child {
+    border-bottom-right-radius: $global-border-radius;
+  }
 }
