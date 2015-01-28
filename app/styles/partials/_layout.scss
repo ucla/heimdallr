@@ -69,6 +69,30 @@ core-pages {
   }
 }
 
+// notification badge
+
+//container
+.badged {
+  position: relative;
+}
+
+//element w/ badge
+.badge:after{
+  content:attr(data-count);
+  position: absolute;
+  background: $ucla-pink;
+  height: $double-spacing;
+  top: -$default-spacing;
+  right: -$default-spacing;
+  width: $double-spacing;
+  text-align: center;
+  line-height: $double-spacing;
+  font-size: $default-spacing;
+  border-radius: 50%;
+  color: $white;
+  border: 1px solid $ucla-pink;
+}
+
 // -------- or --------
 
 .line-thru {
