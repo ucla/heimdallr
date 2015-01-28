@@ -1,8 +1,11 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="submit-confirmation" attributes="">
+<polymer-element name="submit-confirmation" attributes="" noscript>
   <template>
     <link rel="stylesheet" href="submit-confirmation.css">
+    <h2>Running Query...</h2>
+    <content select="dl"></content>
+    <content select="h3"></content>
   </template>
   <script>
     (function () {

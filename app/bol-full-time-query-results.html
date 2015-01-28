@@ -194,7 +194,7 @@
             </form>
           </section>
           <submit-confirmation>
-          
+            
           </submit-confirmation>
         </div>
         
@@ -304,7 +304,8 @@
                 <input type="tel" name="approver-phone-1" id="approver-phone-1" placeholder="Approver's Phone" value="54321">
               </fieldset>
               
-              <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save Affiliation Changes</button>
+              <button class="primary-button" type="submit" name="affiliation-submit">Save Affiliation Changes</button>
+              <button class="secondary-button" type="submit" name="affiliation-submit">Remove Affiliation Information</button>
             </form>
           </section>
           <submit-confirmation>
@@ -314,28 +315,29 @@
         
         <div>
           <section>
-            <form id="affiliation" role="form">
+            <form id="service-holds" role="form">
               <legend>Manage Service Holds</legend>
                           
               <label for"dhendfield">Hold Ends On:</label>
               <input type="text" id="dhendfield" class="ajaxdatefield" value="">
-            
-              <label for="dhtypeselect">Type of Hold:</label>  
-              <select id="dhtypeselect">
-                <option value="Spouse access">Spouse access</option>
-                <option value="Other (see reason)" selected="selected">Other (see reason)</option>
-              </select>
               
               <p>Services on Hold:</p>
               
               <label class="for-checkbox"><input type="checkbox" value="email">Email</label>
               <label class="for-checkbox"><input type="checkbox" value="googleapps">Web hosting</label>
               <label class="for-checkbox"><input type="checkbox" value="proxyvpn">Proxy/VPN</label>
-                
+              
+              <label for="dhtypeselect">Type of Hold:</label>  
+              <select id="dhtypeselect">
+                <option value="Spouse access">Spouse access</option>
+                <option value="Other (see reason)" selected="selected">Other (see reason)</option>
+              </select>
+              
               <label for="dhreasonfield">Reason:</label>
               <textarea id="dhreasonfield" rows="3" cols="40"></textarea>
               
-              <button class="primary-button" type="submit" name="bol-mail-storage-submit">Save Affiliation Changes</button>
+              <button class="primary-button" type="submit" name="service-holds-submit">Change Service Holds</button>
+              <button class="secondary-button" type="submit" name="service-holds-clear">Remove Existing Holds</button>
             </form>
           </section>
           <submit-confirmation>

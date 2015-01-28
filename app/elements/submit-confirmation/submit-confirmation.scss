@@ -4,4 +4,21 @@
 
 :host {
   display: flex;
+  background: lighten($neutral, 14%);
+  position: relative;
+  border-radius: $half-spacing;
+  padding: $default-spacing;
+  min-height: $octo-spacing;
+}
+
+:host:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 25%;
+   width: 0;
+   height: 0;
+   border-top: $default-spacing solid transparent;
+   border-right: $default-spacing solid lighten($neutral, 14%);
+   border-bottom: $default-spacing solid transparent;
 }
