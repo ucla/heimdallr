@@ -2,7 +2,7 @@
 
 // Note to self, add in elements cut for the SSO page
 
-input, textarea {
+input, textarea, select {
   width: 100%;
   font-size: $h4-font-size;
   background: $input-background-color;
@@ -54,12 +54,6 @@ select:focus:invalid:focus {
   color: darken($neutral, 20%);
 }
 
-select {
-  border: 1px solid $neutral;
-  background-color: $white;
-  display: block;
-}
-
 select[multiple] {
   height: auto;
 }
@@ -86,7 +80,6 @@ label {
 
 .for-checkbox, .for-radio {
   display: block;
-  margin: 0;
   input {
     margin-right: $half-spacing;
     margin-bottom: 0;

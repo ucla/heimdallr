@@ -1,4 +1,4 @@
-// overall layout
+// home
 
 .home div[role="main"] {
   display: flex;
@@ -9,6 +9,19 @@
   max-width: 41rem;
   margin: auto;
 }
+
+.hero-form-input {
+  font-size: $h1-font-size;
+  width: 41rem;
+  margin-bottom: 0;
+}
+
+.check-queue {
+  margin-top: $octo-spacing;
+  align-self: center;
+}
+
+// query results/etc layout
 
 .full-time div[role="main"] {
   display: block;
@@ -24,6 +37,10 @@
   flex: 1 0 auto;
 }
 
+labeled-results:first-child h2 {
+  margin-top: 0;
+}
+
 .query-results {
   width: 39rem;
   float: left;
@@ -35,29 +52,6 @@
   top: 10px;
 }
 
-// misc classes 
-
-.full {
-  width: 100%;
-}
-
-.back {
-  text-decoration: none;
-  font-size: 3.5rem;
-}
-
-// actions
-
-.inline-label-input {
-  input {
-    width: 1.5rem;
-  }
-}
-
-.status h2, .account-actions h2 {
-  margin-top: 0;
-}
-
 core-pages {
   div {
     margin-top: 1rem;
@@ -67,4 +61,15 @@ core-pages {
     padding-right: $double-spacing;
     float: left;
   }
+}
+
+// misc classes 
+
+.full {
+  width: 100%;
+}
+
+.back {
+  text-decoration: none;
+  font-size: 3.5rem;
 }

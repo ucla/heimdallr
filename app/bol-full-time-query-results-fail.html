@@ -188,7 +188,7 @@
               <label for="map-an-id--uid" hidden>UID to be mapped</label>
               <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped" aria-required="true" pattern=".{9}" required  oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
               
-              <div class="for-checkbox"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked><label for="map-an-id--include-email">Copy alternate email address if empty on UID</label></div>
+              <label class="for-checkbox"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked>Copy alternate email address if empty on UID</label>
           
               <button class="primary-button" type="submit" name="map-an-id-submit">Try and map it!</button>
               
@@ -313,7 +313,7 @@ FAILED
               <label for="expirationfield">Affiliate Expiration:</label>
               <input type="date" id="expirationfield" placeholder="Affiliation Expires On" value="None" />
               
-              <p><b>Departmental Approver:</b></p>
+              <h3>Departmental Approver:</h3>
               
               <fieldset>
                 <label for="approver-name-1">Approver's Name:</label>
@@ -341,11 +341,13 @@ FAILED
               <label for"dhendfield">Hold Ends On:</label>
               <input type="text" id="dhendfield" class="ajaxdatefield" value="">
               
-              <p><b>Services on Hold:</b></p>
+              <h3>Services on Hold:</h3>
               
               <label class="for-checkbox"><input type="checkbox" value="email">Email</label>
               <label class="for-checkbox"><input type="checkbox" value="googleapps">Web hosting</label>
               <label class="for-checkbox"><input type="checkbox" value="proxyvpn">Proxy/VPN</label>
+              
+              <h3>Purpose of the Hold(s):</h3>
               
               <label for="dhtypeselect">Type of Hold:</label>  
               <select id="dhtypeselect">
@@ -356,14 +358,15 @@ FAILED
               <label for="dhreasonfield">Reason:</label>
               <textarea id="dhreasonfield" rows="3" cols="40"></textarea>
               
-              <button class="primary-button" type="submit" name="service-holds-submit">Change Service Holds</button>
-              <button class="secondary-button" type="submit" name="service-holds-clear">Remove Existing Holds</button>
+              <button class="primary-button" type="submit" name="service-holds-submit">Save Holds Changes</button>
+              <button class="secondary-button" type="submit" name="service-holds-clear">Remove Holds</button>
             </form>
           </section>
           <confirmation-check>
           
           </confirmation-check>
         </div>
+        
         
       </core-pages>
             
