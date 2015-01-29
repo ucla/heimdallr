@@ -52,3 +52,17 @@
     z-index: -2;
   }
 }
+
+.fail {
+  background: $ucla-pink;
+  color: $black;
+  border-radius: $global-border-radius;
+  padding: $half-spacing;
+}
+
+.success {
+  background: $ucla-green;
+  color: $black;
+  border-radius: $global-border-radius;
+  padding: $half-spacing;
+}

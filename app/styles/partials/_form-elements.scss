@@ -158,3 +158,16 @@ button[disabled] {
   cursor: not-allowed;
   box-shadow: none;
 } 
+
+.primary-button {
+  background-color: $primary-color;
+  color: $white;
+  &:hover {
+    background-color: $secondary-color;
+    color: $primary-color-alternate-state;
+  }
+}
+
+.cancel-button:hover {
+  background-color: mix($ucla-pink, $white, 80%);
+}
