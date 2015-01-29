@@ -95,8 +95,8 @@ button, .button {
   }
   display: inline-block;
   *display: inline; /*IE 6/7*/
+  margin: $half-spacing 0;
   zoom: 1;
-  line-height: normal;
   white-space: nowrap;
   vertical-align: baseline;
   text-align: center;
@@ -119,6 +119,10 @@ button, .button {
   background-color: #E6E6E6;
   text-decoration: none;
   border-radius: $global-border-radius;
+}
+
+input +  button {
+  margin-top: $half-spacing / 2;
 }
 
 .button a {
