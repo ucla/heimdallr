@@ -9,8 +9,7 @@
   background: lighten($neutral, 14%);
   position: relative;
   border-radius: $half-spacing;
-  padding: $default-spacing;
-  min-height: $octo-spacing;
+  padding: 0 $default-spacing;
 }
 
 :host:before {
@@ -38,7 +37,8 @@ p {
 }
 
 h3 {
-  display: inline;
+  display: inline-block;
+  margin-top: 0;
 }
 
 .fail {
