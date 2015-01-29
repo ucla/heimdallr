@@ -5,7 +5,7 @@
 :host {
   display: block;
   float: right;
-  width: 45%;
+  width: 48%;
   background: lighten($neutral, 14%);
   position: relative;
   border-radius: $half-spacing;
@@ -25,12 +25,20 @@
    border-bottom: $default-spacing solid transparent;
 }
 
+dl {
+  font-size: $meta-font-size;
+}
+
 dd {
   font-weight: bold;
 }
 
 p {
   font-size: $meta-font-size;
+}
+
+h3 {
+  display: inline;
 }
 
 .fail {
