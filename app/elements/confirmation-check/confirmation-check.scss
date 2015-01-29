@@ -3,7 +3,9 @@
 @import 'config/global-vars';
 
 :host {
-  display: flex;
+  display: block;
+  float: right;
+  width: 45%;
   background: lighten($neutral, 14%);
   position: relative;
   border-radius: $half-spacing;
@@ -15,10 +17,32 @@
    content:"";
    position: absolute;
    right: 100%;
-   top: 25%;
+   top: $double-spacing;
    width: 0;
    height: 0;
    border-top: $default-spacing solid transparent;
    border-right: $default-spacing solid lighten($neutral, 14%);
    border-bottom: $default-spacing solid transparent;
+}
+
+dd {
+  font-weight: bold;
+}
+
+p {
+  font-size: $meta-font-size;
+}
+
+.fail {
+  background: $ucla-pink;
+  color: $black;
+  border-radius: $global-border-radius;
+  padding: $half-spacing;
+}
+
+.success {
+  background: $ucla-green;
+  color: $black;
+  border-radius: $global-border-radius;
+  padding: $half-spacing;
 }

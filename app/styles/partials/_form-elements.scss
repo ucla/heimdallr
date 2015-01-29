@@ -88,6 +88,10 @@ label {
   }
 }
 
+ input + .for-checkbox, input + .for-radio {
+   margin-top: 0;
+ }
+
 button, .button {
   width: 100%;
   @include breakpoint($multi-column) {
@@ -121,7 +125,7 @@ button, .button {
   border-radius: $global-border-radius;
 }
 
-input +  button {
+input + button {
   margin-top: $half-spacing / 2;
 }
 
