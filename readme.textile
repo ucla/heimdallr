@@ -4,6 +4,12 @@ Front end for admin level UCLA (BOL) account management.
 
 Son of Odin, brother to Baldr - SURPASSING BOTH!
 
+prototype visible @ http://ucla.github.io/heimdallr/ 
+
+note: parts are intended to be viewed at 1440px wide or higher, evergreen browser or IE10+. 
+
+temporary issue with shadow DOM styling in Chrome :)
+
 h2. Dependencies
 
 This contains custom elements from polymer and will pull in the custom elements from separate repos once they've matured.
