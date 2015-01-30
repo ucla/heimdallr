@@ -2,6 +2,8 @@ h1. Heimdallr
 
 Front end for admin level UCLA (BOL) account management.
 
+Son of Odin, brother to Baldr - SURPASSING BOTH!
+
 h2. Dependencies
 
 This contains custom elements from polymer and will pull in the custom elements from separate repos once they've matured.
