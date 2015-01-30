@@ -120,9 +120,18 @@ button, .button {
   *color: #444; /* IE 6 & 7 */
   border: 1px solid #999;  /*IE 6/7/8*/
   border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
-  background-color: #E6E6E6;
+  background-color: $background-light-grey;
   text-decoration: none;
   border-radius: $global-border-radius;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    background-color: $alternate-light-grey;
+  }
+  &:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+  }
 }
 
 input + button {
@@ -137,14 +146,6 @@ input + button {
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
-}
-
-button:focus {
-  outline: 0;
-}
-
-button:active {
-  box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
 }
 
 button[disabled] {

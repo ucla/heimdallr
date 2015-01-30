@@ -32,7 +32,7 @@ tbody tr td {
 }
 
 tbody tr:nth-child(2n) {
-  background: lighten($neutral, 14%);
+  background: $background-light-grey;
 }
 
 tbody tr:last-child td {

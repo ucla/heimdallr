@@ -6,7 +6,7 @@
   display: block;
   float: right;
   width: 48%;
-  background: lighten($neutral, 14%);
+  background: $background-light-grey;
   position: relative;
   border-radius: $half-spacing;
   padding: 0 $default-spacing;
@@ -20,7 +20,7 @@
    width: 0;
    height: 0;
    border-top: $default-spacing solid transparent;
-   border-right: $default-spacing solid lighten($neutral, 14%);
+   border-right: $default-spacing solid $background-light-grey;
    border-bottom: $default-spacing solid transparent;
 }
 

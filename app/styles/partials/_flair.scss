@@ -43,7 +43,7 @@
     z-index: -1;
   }
   &:after {
-    border-bottom: 1px solid lighten($neutral, 13%);
+    border-bottom: 1px solid $background-light-grey;
     content: '';
     display: block;
     position: absolute;
