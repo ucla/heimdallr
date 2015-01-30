@@ -4,7 +4,9 @@ Front end for admin level UCLA (BOL) account management.
 
 Son of Odin, brother to Baldr - SURPASSING BOTH!
 
-prototype visible @ http://ucla.github.io/heimdallr/ 
+h2. view prototype 
+
+manually updated @ http://ucla.github.io/heimdallr/, up to date as of commit e20db9d7de
 
 note: parts are intended to be viewed at 1440px wide or higher, evergreen browser or IE10+. 
 
