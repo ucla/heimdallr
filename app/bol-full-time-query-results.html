@@ -7,11 +7,12 @@
   <title>heimdallr</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <!-- build:css styles/screen.css -->
   <link rel="stylesheet" href="styles/screen.css">
   <!-- endbuild-->
+  
+  <script src="vendor/modernizr.custom.js"></script>
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
@@ -343,7 +344,6 @@
     <p><a href="#">Privacy, Security &amp; Legal</a> <span>Loaded: 2014-12-05 20:57:26 +0000</span></p>
   </ucla-footer>
 
-  <!-- build:js scripts/app.js -->
   <script src="bower_components/Stickyfill/dist/stickyfill.min.js"></script>
   <script type="text/javascript">
     var stickyElements = document.getElementsByClassName('account-actions');
@@ -352,6 +352,7 @@
         Stickyfill.add(stickyElements[i]);
     }
   </script>
+  <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
   <!-- endbuild-->
 </body>
