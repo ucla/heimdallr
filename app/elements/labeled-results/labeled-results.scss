@@ -6,19 +6,19 @@
   display: block;
 }
 
-h2 {
+::content h2 {
   color: $body-text-color;
   padding: 0 $half-spacing;
   margin-bottom: 0;
 }
 
-dl {
+::content dl {
   font-size: $meta-font-size;
   margin-top: 0;
   color: $black;
 }
 
-dt, dd {
+::content dt, ::content dd {
   overflow: hidden;
   padding-top: .2rem;
   background: $background-light-grey;
@@ -28,15 +28,15 @@ dt, dd {
   }
 }
 
-dt {
+::content dt {
   float: left;
   width: 25%;
   text-align: right;
   padding-right: $default-spacing;
-  font-weight: bold;
+  font-weight: 700;
 }
 
-dd {
+::content dd {
   word-wrap: break-word;
   width: 75%;
   margin-left: 0;

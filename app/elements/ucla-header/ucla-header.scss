@@ -17,14 +17,6 @@ img {
   max-height: 80px;
 }
 
-h1 {
-  color: $white;
-  font-family: 'Proxima Nova', Verdana, sans-serif;
-  font-size: $h2-font-size;
-  margin: 0;
-  padding-top: 2.45rem;
-}
-
 .app-name {
   flex-grow: 10;
 }
@@ -36,7 +28,15 @@ a {
   }
 }
 
-aside {
+::content h1 {
+  color: $white;
+  font-family: 'Proxima Nova', Verdana, sans-serif;
+  font-size: $h2-font-size;
+  margin: 0;
+  padding-top: 2.45rem;
+}
+
+::content aside {
   align-self: flex-start;
   padding-right: $default-spacing;
   color: $white;

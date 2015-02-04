@@ -24,31 +24,31 @@
    border-bottom: $default-spacing solid transparent;
 }
 
-dl {
+::content dl {
   font-size: $meta-font-size;
 }
 
-dd {
+::content dl dd {
   font-weight: bold;
 }
 
-p {
+::content p {
   font-size: $meta-font-size;
 }
 
-h3 {
+::content h3 {
   display: inline-block;
   margin-top: 0;
 }
 
-.fail {
+::content .fail {
   background: $ucla-pink;
   color: $black;
   border-radius: $global-border-radius;
   padding: $half-spacing;
 }
 
-.success {
+::content .success {
   background: $ucla-green;
   color: $black;
   border-radius: $global-border-radius;

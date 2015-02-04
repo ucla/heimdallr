@@ -12,11 +12,11 @@
   font-size: $meta-font-size;
 }
 
-p {
+::content p {
   margin: 0 auto;
 }
 
-a {
+::content a {
   text-decoration: none;
   color: $footer-link-color;
   &:visited { 
