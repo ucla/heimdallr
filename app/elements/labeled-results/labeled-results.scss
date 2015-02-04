@@ -42,7 +42,7 @@
   margin-left: 0;
 }
 
-:host(.pink) {
+::content .pink {
   dt, dd {
     background: mix($ucla-pink, $white, 40%);
     border-bottom: 1px solid mix($ucla-pink, $white, 45%);
@@ -52,7 +52,7 @@
   }
 }
 
-:host(.yellow) {
+::content .yellow {
   dt, dd {
     background: lighten($ucla-gold, 20%);
     border-bottom: 1px solid $ucla-gold;
@@ -62,7 +62,7 @@
   }
 }
 
-:host(.blue) {
+::content .blue {
   dt, dd {
     background: mix($ucla-cyan, $white, 50%);
     border-bottom: 1px solid mix($ucla-cyan, $white, 55%);
@@ -72,7 +72,7 @@
   }
 }
 
-:host(.orange) {
+::content .orange {
   dt,dd {
     background: lighten($ucla-orange, 14%);
     border-bottom: 1px solid $ucla-orange;
