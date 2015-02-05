@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles/screen.css">
   <!-- endbuild-->
   
-  <script src="vendor/modernizr.custom.js"></script>
+  <script src="scripts/modernizr.custom.js"></script>
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
@@ -309,7 +309,7 @@
               <legend>Manage Service Holds</legend>
                           
               <label for"dhendfield">Hold Ends On:</label>
-              <input type="text" id="dhendfield" class="ajaxdatefield" value="">
+              <input type="date" id="dhendfield" value="">
               
               <h3>Services on Hold:</h3>
               
@@ -344,6 +344,8 @@
     <p><a href="#">Privacy, Security &amp; Legal</a> <span>Loaded: 2014-12-05 20:57:26 +0000</span></p>
   </ucla-footer>
 
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/webshim/js-webshim/minified/polyfiller.js"></script>
   <script src="bower_components/Stickyfill/dist/stickyfill.min.js"></script>
   <script type="text/javascript">
     var stickyElements = document.getElementsByClassName('account-actions');
@@ -351,6 +353,9 @@
     for (var i = stickyElements.length - 1; i >= 0; i--) {
         Stickyfill.add(stickyElements[i]);
     }
+    
+    // Polyfill form features via webshim
+    $.webshim.polyfill('forms forms-ext');
   </script>
   
   <!-- build:js scripts/app.js -->
