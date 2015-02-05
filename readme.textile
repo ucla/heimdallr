@@ -10,8 +10,6 @@ manually updated @ http://ucla.github.io/heimdallr/, up to date as of commit e20
 
 note: parts are intended to be viewed at 1440px wide or higher, evergreen browser or IE10+. 
 
-temporary issue with shadow DOM styling in Chrome :)
-
 h2. Dependencies
 
 This contains custom elements from polymer and will pull in the custom elements from separate repos once they've matured.
@@ -21,3 +19,8 @@ Built from https://github.com/ucla/generator-polymer
 You'll need "https://www.npmjs.com":NPM, "http://bower.io":Bower & "http://bundler.io":Bundler. Once you have those going, run a bower + bundler install.
 
 $ @grunt serve@ to view or just $ @grunt@ to build out @/dist@.
+
+h2. TODO
+
+* custom element for modal password check for full timers
+* fix display of polyfilled date input fields
