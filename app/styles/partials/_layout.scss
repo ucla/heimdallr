@@ -43,13 +43,18 @@ labeled-results:first-child h2 {
 
 .query-results {
   width: 39rem;
-  float: left;
+  @include breakpoint($collapse-account-actions) {
+    float: left;
+  }
 }
 
 .account-actions {
-  margin-left: 41rem;
-  position: sticky;
-  top: 10px;
+  max-width: 60rem;
+  @include breakpoint($collapse-account-actions) {
+    margin-left: 41rem;
+    position: sticky;
+    top: 10px;
+  }
 }
 
 core-pages {
