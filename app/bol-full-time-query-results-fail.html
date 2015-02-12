@@ -169,6 +169,8 @@
           <dd>Disabled</dd>
         </dl>
       </labeled-results>
+      
+      <h2><a href="password-change-request.html" class="button full">Launch Password Change Request Form</a></h2>
     
     </article>
     
@@ -218,6 +220,16 @@
           <section>
             <form id="user-requested-password" role="form">
               <legend>Change Joe Bruin's Password</legend>
+              
+              <p>Please enter the desired password. It must be between 8 and 128 characters in length and must contain a minimum of at least 1 character from two of the three following sets:</p>
+  
+              <ul>
+                <li>letters: a-z or A-Z</li>
+                <li>numbers: 0-9</li>
+                <li>special characters: !@#$%^&*().,</li>
+              </ul>
+              
+              <p>No other characters are valid. Passwords are case sensitive. The new password must be different from the old password.</p>
   
               <label for="pass-requested" hidden>New Password</label>
               <input id="pass-requested" name="pass-requested" type="password" placeholder="Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
@@ -328,7 +340,7 @@
               <legend>Manage Affiliation</legend>
               
               <label for="affselect">Affiliation:</label>
-                <select id="affselect">
+                <select id="affselect" multiple size="13">
                   <option value="None">None</option>
                   <option value="Visiting Scholar">Visiting Scholar</option>
                   <option value="Visiting Graduate Researcher">Visiting Graduate Researcher</option>
@@ -345,7 +357,7 @@
                 </select>
               
               <label for="expirationfield">Affiliate Expiration:</label>
-              <input type="date" id="expirationfield" placeholder="Affiliation Expires On" value="None" />
+              <input type="date" id="expirationfield" placeholder="Affiliation Expires On">
               
               <h3>Departmental Approver:</h3>
               
