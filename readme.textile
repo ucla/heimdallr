@@ -23,4 +23,4 @@ $ @grunt serve@ to view or just $ @grunt@ to build out @/dist@.
 h2. TODO
 
 * custom element for modal password check for full timers
-* fix display of polyfilled date input fields
+* chrome does not display screaming cat emoji!!
