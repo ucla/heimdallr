@@ -71,7 +71,7 @@ legend {
   display: block;
   width: 100%;
   font-weight: normal;
-  color: $primary-color;
+  color: $primary-color-safe;
 }
 
 label {
@@ -165,7 +165,7 @@ button[disabled] {
   color: $white;
   &:hover {
     background-color: $secondary-color;
-    color: $primary-color-alternate-state;
+    color: $primary-color;
   }
 }
 
