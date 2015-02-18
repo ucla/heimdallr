@@ -15,7 +15,7 @@
   <script src="scripts/modernizr.custom.js"></script>
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
-  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
   <!-- endbuild -->
 
   <!-- build:vulcanized elements/elements.vulcanized.html -->
@@ -23,7 +23,7 @@
   <!-- endbuild-->
 </head>
 
-<body unresolved class="full-time">
+<body unresolved class="multi-column">
   
   <ucla-header>
     <h1>UCLA Account Management</h1>
@@ -190,7 +190,7 @@
       
         <div>
           <section>
-            <form id="map-an-id" role="form">
+            <form id="map-an-id" role="form" action="/" method="post">
               <legend>Map UID to Joe Bruin's Account</legend>
           
               <label for="map-an-id--uid" hidden>UID to be mapped</label>
@@ -198,7 +198,7 @@
               
               <label class="for-checkbox"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked>Copy alternate email address if empty on UID</label>
           
-              <button class="primary-button" type="submit" name="map-an-id-submit">Try and map it!</button>
+              <password-confirm>Try and map it!</password-confirm>
               
             </form>
           </section>
@@ -218,7 +218,7 @@
         
         <div>
           <section>
-            <form id="user-requested-password" role="form">
+            <form id="user-requested-password" role="form" action="/" method="post">
               <legend>Change Joe Bruin's Password</legend>
               
               <p>Please enter the desired password. It must be between 8 and 128 characters in length and must contain a minimum of at least 1 character from two of the three following sets:</p>
@@ -237,7 +237,7 @@
               <label for="pass-requested-confirm" hidden>Confirm New Password</label>
               <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
     
-              <button class="primary-button" type="submit" name="user-requested-password-submit">Change Password</button>
+              <password-confirm>Change Password</password-confirm>
             </form>
            </section>
            
@@ -261,27 +261,27 @@
         
         <div>
           <section>
-            <form id="alt-email-address" role="form">
+            <form id="alt-email-address" role="form" action="/" method="post">
               <legend>Set an alternate email address</legend>
               
               <label for="alt-email-address-input" hidden>Alternate Email Address</label>
               <input id="alt-email-address-input" name="alt-email-address-input" type="email" placeholder="Alternate Email Address" aria-required="true" required>
               
-              <button class="primary-button" type="submit" name="bol-mail-storage-submit">Set Alternate Email Address</button>
+              <password-confirm>Set Alternate Email Address</password-confirm>
             </form>
             <strong class="line-thru">or</strong>
-            <form id="routing-address" role="form">
+            <form id="routing-address" role="form" action="/" method="post">
               <legend>Set routing address</legend>
               
               <label for="routing-address-input" hidden>Routing Address</label>
               <input id="routing-address-input" name="routing-address-input" type="email" placeholder="Routing Address" aria-required="true" required>
               
-              <button class="primary-button" type="submit" name="routing-address-submit">Set Routing Address</button>
+              <password-confirm>Set Routing Address</password-confirm>
             </form>
             <strong class="line-thru">or</strong>
-            <form id="bol-mail-storage" role="form">
+            <form id="bol-mail-storage" role="form" action="/" method="post">
               <legend>Create BOL Mail Storage</legend>
-              <button class="primary-button" type="submit" name="bol-mail-storage-submit">Create BOL Mail Storage</button>
+              <password-confirm>Create BOL Mail Storage</password-confirm>
             </form>
           </section>
           
@@ -301,7 +301,7 @@
         
         <div>
           <section>
-            <form id="bol-services" role="form">
+            <form id="bol-services" role="form" action="/" method="post">
               <legend>Manage BOL Services for Joe Bruin</legend>
                 <label class="for-checkbox"><input type="checkbox" value="bol-email">bol-email</label>
                 <label class="for-checkbox"><input type="checkbox" value="bolsoftware">bolsoftware</label>
@@ -312,7 +312,7 @@
                 <label class="for-checkbox"><input type="checkbox" value="googleapps">googleapps</label>
                 <label class="for-checkbox"><input type="checkbox" value="xmpp">xmpp</label>
                 
-                <button class="primary-button" type="submit" name="bol-mail-storage-submit">Update Access to BOL Services</button>
+                <password-confirm>Update Access to BOL Services</password-confirm>
             </form>
           </section>
           
@@ -336,7 +336,7 @@
         
         <div>
           <section>
-            <form id="affiliation" role="form">
+            <form id="affiliation" role="form" action="/" method="post">
               <legend>Manage Affiliation</legend>
               
               <label for="affselect">Affiliation(s):</label>
@@ -370,8 +370,8 @@
                 <input type="tel" name="approver-phone-1" id="approver-phone-1" placeholder="Approver's Phone" value="54321">
               </fieldset>
               
-              <button class="primary-button" type="submit" name="affiliation-submit">Update Affiliation Changes</button>
-              <button class="cancel-button" type="submit" name="affiliation-submit">Remove Affiliation Info</button>
+              <password-confirm>Save Affiliation Changes</password-confirm>
+              <button class="cancel-button" type="reset" name="affiliation-clear">Clear Affiliation Info</button>
             </form>
           </section>
           <query-feedback>
@@ -394,7 +394,7 @@
         
         <div>
           <section>
-            <form id="service-holds" role="form">
+            <form id="service-holds" role="form" action="/" method="post">
               <legend>Manage Service Holds</legend>
                           
               <label for"dhendfield">Hold Ends On:</label>
@@ -417,8 +417,8 @@
               <label for="dhreasonfield">Reason:</label>
               <textarea id="dhreasonfield" rows="3" cols="40"></textarea>
               
-              <button class="primary-button" type="submit" name="service-holds-submit">Update Holds</button>
-              <button class="cancel-button" type="submit" name="service-holds-clear">Remove All Holds</button>
+              <password-confirm>Save Holds</password-confirm>
+              <button class="cancel-button" type="reset" name="service-holds-clear">Clear All Holds</button>
             </form>
           </section>
           <query-feedback>
@@ -453,9 +453,9 @@
     <p><a href="#">Privacy, Security &amp; Legal</a> <span>Loaded: 2014-12-05 20:57:26 +0000</span></p>
   </ucla-footer>
 
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/webshim/js-webshim/minified/polyfiller.js"></script>
-  <script src="bower_components/Stickyfill/dist/stickyfill.min.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/webshim/js-webshim/minified/polyfiller.js"></script>
+  <script src="/bower_components/Stickyfill/dist/stickyfill.min.js"></script>
   <script type="text/javascript">
     var stickyElements = document.getElementsByClassName('account-actions');
     
@@ -464,7 +464,7 @@
     }
     
     // Polyfill form features via webshim
-    $.webshim.polyfill('forms forms-ext');
+    $.webshim.polyfill('forms-ext');
   </script>
   
   <!-- build:js scripts/app.js -->

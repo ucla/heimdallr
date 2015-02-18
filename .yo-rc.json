@@ -1,1 +1,5 @@
-{}
+{
+  "generator-polymer-ucla": {
+    "includeSass": true
+  }
+}

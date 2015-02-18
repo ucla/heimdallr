@@ -1,4 +1,7 @@
-// home
+/////////////////////////////////////////
+///               HOME
+/////////////////////////////////////////
+
 
 .home div[role="main"] {
   display: flex;
@@ -21,16 +24,19 @@
   align-self: center;
 }
 
-// query results/etc layout
+/////////////////////////////////////////
+///          APP LAYOUT
+/////////////////////////////////////////
 
-.full-time div[role="main"] {
+
+.multi-column div[role="main"] {
   display: block;
   width: 98%;
   margin: 0 auto;
   flex: 1 0 auto;
 }
 
-.part-time div[role="main"] {
+.single-column div[role="main"] {
   display: block;
   width: 41rem;
   margin: 0 auto;
@@ -67,7 +73,10 @@ core-pages {
   }
 }
 
-// misc classes 
+/////////////////////////////////////////
+///              MISC
+/////////////////////////////////////////
+
 
 .full {
   width: 100%;

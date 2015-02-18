@@ -1,15 +1,4 @@
 'use strict';
-var LIVERELOAD_PORT = 35729;
-var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
-var mountFolder = function (dir) {
-  return require('serve-static')(require('path').resolve(dir));
-};
-
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to match all subfolders:
-// 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
   // show elapsed time at the end
@@ -28,17 +17,13 @@ module.exports = function (grunt) {
     yeoman: yeomanConfig,
     watch: {
       options: {
-        nospawn: true,
-        livereload: { liveCSS: false }
+        nospawn: true
       },
-      livereload: {
-        options: {
-          livereload: true
-        },
+      default: {
         files: [
           '<%= yeoman.app %>/*.html',
           '<%= yeoman.app %>/elements/{,*/}*.html',
-          '{.tmp,<%= yeoman.app %>}/elements/{,*/}*.css',
+          '{.tmp,<%= yeoman.app %>}/elements/{,*/}*.{css,js}',
           '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -113,50 +98,38 @@ module.exports = function (grunt) {
         }]
       }
     },
-    connect: {
+    browserSync: {
       options: {
+        notify: false,
         port: 9000,
-        // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
+        open: true
       },
-      livereload: {
+      app: {
         options: {
-          middleware: function () {
-            return [
-              lrSnippet,
-              mountFolder('.tmp'),
-              mountFolder(yeomanConfig.app)
-            ];
+          watchTask: true,
+          injectChanges: false, // can't inject Shadow DOM
+          server: {
+            baseDir: ['.tmp', '<%= yeoman.app %>'],
+            routes: {
+              '/bower_components': 'bower_components'
+            }
           }
-        }
-      },
-      test: {
-        options: {
-          open: {
-            target: 'http://localhost:<%= connect.options.port %>/test'
-          },
-          middleware: function () {
-            return [
-              mountFolder('.tmp'),
-              mountFolder(yeomanConfig.app)
-            ];
-          },
-          keepalive: true
-        }
+        },
+        src: [
+          '.tmp/**/*.{css,html,js}',
+          '<%= yeoman.app %>/**/*.{css,html,js}'
+        ]
       },
       dist: {
         options: {
-          middleware: function () {
-            return [
-              mountFolder(yeomanConfig.dist)
-            ];
+          server: {
+            baseDir: 'dist'
           }
-        }
-      }
-    },
-    open: {
-      server: {
-        path: 'http://localhost:<%= connect.options.port %>'
+        },
+        src: [
+          '<%= yeoman.dist %>/**/*.{css,html,js}',
+          '!<%= yeoman.dist %>/bower_components/**/*'
+        ]
       }
     },
     clean: {
@@ -184,11 +157,19 @@ module.exports = function (grunt) {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
-        dirs: ['<%= yeoman.dist %>'],
-        blockReplacements: {
-          vulcanized: function (block) {
-            return '<link rel="import" href="' + block.dest + '">';
-          }
+        dirs: ['<%= yeoman.dist %>']
+      }
+    },
+    replace: {
+      dist: {
+        options: {
+          patterns: [{
+            match: /\/elements\/elements\.html/g,
+            replacement: '/elements/elements.vulcanized.html'
+          }]
+        },
+        files: {
+          '<%= yeoman.dist %>/index.html': ['<%= yeoman.dist %>/index.html']
         }
       }
     },
@@ -243,9 +224,12 @@ module.exports = function (grunt) {
             'elements/**',
             '!elements/**/*.scss',
             'images/{,*/}*.{webp,gif}',
-            'fonts/**',
-            'bower_components/**'
-          ]
+            'fonts/**' ]
+        }, {
+          expand: true,
+          dot: true,
+          dest: '<%= yeoman.dist %>',
+          src: ['bower_components/**']
         }]
       },
       styles: {
@@ -258,16 +242,6 @@ module.exports = function (grunt) {
       }
     },
     'wct-test': {
-      options: {
-        root: '<%= yeoman.app %>',
-        plugins: {
-          serveStatic: {
-            middleware: function() {
-              return mountFolder('.tmp');
-            }
-          }
-        }
-      },
       local: {
         options: {remote: false}
       },
@@ -304,7 +278,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
+      return grunt.task.run(['build', 'browserSync:dist']);
     }
 
     grunt.task.run([
@@ -312,14 +286,12 @@ module.exports = function (grunt) {
       'sass:server',
       'copy:styles',
       'autoprefixer:server',
-      'connect:livereload',
-      'open',
+      'browserSync:app',
       'watch'
     ]);
   });
 
-  grunt.registerTask('test', ['wct-test:local']);
-  grunt.registerTask('test:browser', ['connect:test']);
+  grunt.registerTask('test:local', ['wct-test:local']);
   grunt.registerTask('test:remote', ['wct-test:remote']);
 
   grunt.registerTask('build', [
@@ -333,6 +305,7 @@ module.exports = function (grunt) {
     'uglify',
     'vulcanize',
     'usemin',
+    'replace',
     'minifyHtml'
   ]);
 
