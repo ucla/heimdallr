@@ -29,7 +29,7 @@
 /////////////////////////////////////////
 
 
-.main-wide div[role="main"] {
+related-results-and-actions, .main-wide div[role="main"] {
   display: block;
   width: 98%;
   margin: 0 auto;
@@ -43,14 +43,13 @@
   flex: 1 0 auto;
 }
 
-labeled-results:first-child h2 {
-  margin-top: 0;
-}
-
-.query-results {
+labeled-results {
   width: 39rem;
   @include breakpoint($collapse-account-actions) {
     float: left;
+  }
+  h2:first-child  {
+    margin-top: 0;
   }
 }
 
