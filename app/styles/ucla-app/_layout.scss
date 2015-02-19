@@ -29,14 +29,14 @@
 /////////////////////////////////////////
 
 
-.multi-column div[role="main"] {
+.main-wide div[role="main"] {
   display: block;
   width: 98%;
   margin: 0 auto;
   flex: 1 0 auto;
 }
 
-.single-column div[role="main"] {
+.main-narrow div[role="main"] {
   display: block;
   width: 41rem;
   margin: 0 auto;
