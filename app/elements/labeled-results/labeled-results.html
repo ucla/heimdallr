@@ -1,8 +1,21 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="labeled-results" attributes="" noscript>
+<polymer-element name="labeled-results" attributes="">
   <template>
     <link rel="stylesheet" href="labeled-results.css">
-    <content></content>
+    <core-selector excludedLocalNames="h2" valueattr="data-related">
+      <content></content>
+    </core-selector>
+    <core-selection id="selection" on-core-select="{{selectAction}}"></core-selection>
   </template>
+  <script>
+    Polymer('labeled-results', {
+      itemTapAction: function(e, detail, sender) {
+        this.$.selection.select(e.target);
+      },
+      selectAction: function(e, detail, sender) {
+        detail.item.classList.toggle('selected', detail.isSelected);
+      }
+    });
+  </script>
 </polymer-element>
