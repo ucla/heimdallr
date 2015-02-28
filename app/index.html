@@ -24,35 +24,35 @@
 </head>
 
 <body unresolved class="home">
-  
+
   <ucla-header>
     <h1>UCLA Account Management</h1>
-    
+
     <aside>
       <p>Logged in as Eugene Acosta</p>
       <a href="#" class="button right">Log out</a>
     </aside>
   </ucla-header>
-  
+
   <div role="main" class="centered-query">
 
     <form id="lookup" role="form" method="get" class="hero-form">
       <label for="lookup-id-uid" hidden>Account ID</label>
       <input id="lookup-id-uid" name="lookup-id-uid" class="hero-form-input" type="text" placeholder="Search by UCLA Logon ID or UID" aria-required="true" pattern=".{3,15}" required autofocus oninvalid="setCustomValidity('Logon IDs must be between 3 and 15 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
-      
+
       <button type="submit" name="lookup" hidden></button>
-      
+
       <p class="hero-form--recent-queries"><strong>Recent Queries: </strong><a href="#"> jbruin</a>, <a href="#">gjbruin</a>, <a href="#">imbanks</a>, <a href="#">ibanks</a>, <a href="#">serikson</a>, <a href="#">twilliams</a>, <a href="#">pwatts</a>, <a href="#">vanganar</a>, <a href="bol-part-time-query-results.html">part time bol results</a>, <a href="bol-full-time-query-results.html">full time bol results</a>.</p>
     </form>
-    
-    <a href="queue-management.html" class="badged check-queue"><button class="badge" data-count="4" >Check the Queue of Password Change Requests</button></a>
+
+    <a href="queue-management.html" class="notification-badged check-queue"><button class="notification-badge" data-count="4" >Check the Queue of Password Change Requests</button></a>
 
   </div>
-  
+
   <ucla-footer>
     <p><a href="#">Privacy, Security &amp; Legal</a> <span>Loaded: 2014-12-05 20:57:26 +0000</span></p>
   </ucla-footer>
-  
+
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
   <!-- endbuild-->
