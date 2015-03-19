@@ -24,24 +24,24 @@
 </head>
 
 <body unresolved class="main-wide">
-  
+
   <ucla-header>
     <h1>UCLA Account Management</h1>
-    
+
     <aside>
       <p>Logged in as Eugene Acosta</p>
       <a href="#" class="button right">Log out</a>
     </aside>
   </ucla-header>
-  
+
   <div role="main" class="general-contents">
-    
+
     <h1>Password Request Queue Management</h1>
-    
+
     <form method="get" id="queue-management"></form>
-    
+
     <table>
-      
+
       <thead>
         <tr>
           <th>Ignore</th>
@@ -52,7 +52,7 @@
           <th>Requested At</th>
         </tr>
       </thead>
-      
+
       <tbody>
         <tr>
           <td><label class="for-checkbox"><input type="radio" value="ignore" name="action1" form="queue-management">Ignore</label></td>
@@ -62,7 +62,7 @@
           <td>someone</td>
           <td>2014-12-05 20:57:26 </td>
         </tr>
-        
+
         <tr>
           <td><label class="for-checkbox"><input type="radio" value="ignore" name="action2" form="queue-management">Ignore</label></td>
           <td><label class="for-checkbox"><input type="radio" value="change" name="action2" form="queue-management">Change</label></td>
@@ -71,7 +71,7 @@
           <td>someone else</td>
           <td>2014-12-05 20:57:26 </td>
         </tr>
-  
+
         <tr>
           <td><label class="for-checkbox"><input type="radio" value="ignore" name="action3" form="queue-management">Ignore</label></td>
           <td><label class="for-checkbox"><input type="radio" value="change" name="action3" form="queue-management">Change</label></td>
@@ -80,7 +80,7 @@
           <td>someone special</td>
           <td>2014-12-05 20:57:26 </td>
         </tr>
-        
+
         <tr>
           <td><label class="for-checkbox"><input type="radio" value="ignore" name="action4" form="queue-management">Ignore</label></td>
           <td><label class="for-checkbox"><input type="radio" value="change" name="action4" form="queue-management">Change</label></td>
@@ -90,18 +90,22 @@
           <td>2014-12-05 20:57:26 </td>
         </tr>
       </tbody>
-      
+
     </table>
-    
+
     <button class="primary-button" type="submit" form="queue-management">Submit actions</button>
-    
+
      <p><a href="queue-management-results.html">(results)</a></p>
-    
+
   </div>
-  
+
   <ucla-footer>
     <p><a href="#">Privacy, Security &amp; Legal</a> <span>Loaded: 2014-12-05 20:57:26 +0000</span></p>
   </ucla-footer>
+
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/webshim/js-webshim/minified/polyfiller.js"></script>
+  <script src="/bower_components/Stickyfill/dist/stickyfill.min.js"></script>
 
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>

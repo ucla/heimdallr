@@ -194,7 +194,7 @@
               <legend>Map UID to Joe Bruin's Account</legend>
 
               <label for="map-an-id--uid" hidden>UID to be mapped</label>
-              <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped" aria-required="true" pattern=".{9}" required  oninvalid="setCustomValidity('UIDs must be 9 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}" >
+              <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped" aria-required="true" pattern=".{9}" required data-errormessage="UIDs must be 9 characters long" >
 
               <label class="for-checkbox"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked>Copy alternate email address if empty on UID</label>
 
@@ -221,10 +221,10 @@
               <p>No other characters are valid. Passwords are case sensitive. The new password must be different from the old password.</p>
 
               <label for="pass-requested" hidden>New Password</label>
-              <input id="pass-requested" name="pass-requested" type="password" placeholder="Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+              <input id="pass-requested" name="pass-requested" type="password" placeholder="Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required data-errormessage="Passwords must be at least 8 characters long">
 
               <label for="pass-requested-confirm" hidden>Confirm New Password</label>
-              <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+              <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required data-errormessage="Passwords must be at least 8 characters long">
 
               <password-confirm>Change Password</password-confirm>
             </form>
@@ -366,16 +366,6 @@
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/webshim/js-webshim/minified/polyfiller.js"></script>
   <script src="/bower_components/Stickyfill/dist/stickyfill.min.js"></script>
-  <script type="text/javascript">
-    var stickyElements = document.getElementsByClassName('account-actions');
-
-    for (var i = stickyElements.length - 1; i >= 0; i--) {
-        Stickyfill.add(stickyElements[i]);
-    }
-
-    // Polyfill form features via webshim
-    $.webshim.polyfill('forms-ext');
-  </script>
 
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
