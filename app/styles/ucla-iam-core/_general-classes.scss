@@ -30,13 +30,13 @@
 	border-top: 1px solid $ucla-blue-light;
 	padding: $half-spacing;
 	color: lighten($body-text-color, 40%);
-	@include breakpoint($grid-liquid) {
+	@include breakpoint($multi-column) {
 		height: $double-spacing;
 	}
 	a, span {
 		display: block;
 		width: 100%;
-		@include breakpoint($grid-liquid) {
+		@include breakpoint($multi-column) {
 			display: inline;
 			width: auto;
 		}
