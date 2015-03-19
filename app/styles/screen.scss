@@ -19,13 +19,13 @@
 @import 'config/global-vars';
 @import 'config/app-specific-vars';
 
-// general IAM partials
-@import 'ucla-iam/global-elements';
-@import 'ucla-iam/tables';
-@import 'ucla-iam/form-elements';
-@import 'ucla-iam/flair';
-@import 'ucla-iam/polyfill-overrides';
+// general IAM partials - DO NOT EDIT
+@import 'ucla-iam-core/global-elements-flex';
+@import 'ucla-iam-core/tables';
+@import 'ucla-iam-core/form-elements';
+@import 'ucla-iam-core/flair';
+@import 'ucla-iam-core/webshim-styling';
 
 // app specific styles
-@import 'ucla-app/layout';
-@import 'ucla-app/custom-element-overrides';
+@import 'ucla-this-app/layout';
+@import 'ucla-this-app/custom-element-overrides';
