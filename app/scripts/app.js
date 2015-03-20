@@ -13,4 +13,4 @@ webshim.setOptions('forms', {
 });
 
 //start polyfilling
-webshim.polyfill('forms');
+webshim.polyfill('forms, forms-ext');
