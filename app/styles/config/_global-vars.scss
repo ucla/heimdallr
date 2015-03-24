@@ -40,6 +40,7 @@ $primary-color: $ucla-blue;
 $primary-color-safe: $ucla-blue-safe;
 $secondary-color: $ucla-gold;
 
+$success-color: $ucla-green;
 $error-color: $ucla-pink;
 $error-color-dark: darken($ucla-pink, 42%);
 $error-color-dark-alt: darken($ucla-pink, 46%);
@@ -51,7 +52,7 @@ $bullet-color: $ucla-green;
 $footer-link-color: $white;
 $footer-link-color-hover: $ucla-yellow;
 
-$form-valid-color: $ucla-blue-light;
+$form-valid-color: $success-color;
 $form-invalid-color: $ucla-pink;
 $input-background-color: lighten($neutral, 19%);
 $input-background-color-focus: $white;
