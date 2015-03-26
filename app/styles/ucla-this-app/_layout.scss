@@ -77,6 +77,9 @@ core-pages {
 ///              MISC
 /////////////////////////////////////////
 
+.line-thru {
+  @include line-thru();
+}
 
 .full {
   width: 100%;
