@@ -21,6 +21,8 @@
   font-size: $meta-font-size;
   margin-top: 0;
   color: $black;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 ::content dt, ::content dd {
@@ -42,6 +44,7 @@
 }
 
 ::content dd {
+  float: right;
   word-wrap: break-word;
   width: 75%;
   margin-left: 0;

@@ -15,4 +15,10 @@ webshim.setOptions('forms', {
 });
 
 //start polyfilling
-webshim.polyfill('forms forms-ext');
+webshim.polyfill('forms forms-ext sticky');
+
+// add sticky to account-actions for chrome
+$('.account-actions')
+	.addClass('ws-sticky')
+	.trigger('wssticky')
+;
