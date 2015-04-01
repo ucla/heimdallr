@@ -41,4 +41,10 @@ a {
   padding-right: $default-spacing;
   color: $white;
   font-size: $meta-font-size;
+  span {
+    @include clearfix;
+  }
+  button {
+    float: right;
+  }
 }
