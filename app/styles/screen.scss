@@ -20,7 +20,9 @@
 @import 'config/app-specific-vars';
 
 // general IAM partials - DO NOT EDIT
-@import 'ucla-iam-core/global-elements-flex';
+// @import 'ucla-iam-core/core-layout';
+@import 'ucla-iam-core/core-layout-flex';
+@import 'ucla-iam-core/global-elements';
 @import 'ucla-iam-core/tables';
 @import 'ucla-iam-core/form-elements';
 @import 'ucla-iam-core/general-classes';
