@@ -14,7 +14,7 @@ h2. Dependencies
 
 This contains custom elements from polymer and will pull in the custom elements from separate repos once they've matured.
 
-Built from https://github.com/ucla/generator-polymer - the structure of this app is based upon what you'll find there, so that's a good place to start.
+Built from https://github.com/ucla/generator-polymer - the structure of this app is based upon what you'll find there, so the "readme":https://github.com/ucla/generator-polymer/blob/master/readme.md or my brief "wiki page":https://github.com/ucla/generator-polymer/wiki there are a good place to start.
 
 In order to build dependencies you'll need to install "Node + NPM":https://www.npmjs.com, "Bower":http://bower.io & "Bundler":http://bundler.io if you haven't already. The instructions assume you're running OS X or some flavour of Linux.
 
