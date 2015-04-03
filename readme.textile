@@ -4,11 +4,11 @@ Front end for admin level UCLA (BOL) account management.
 
 Son of Odin, brother to Baldr - SURPASSING BOTH!
 
-h2. view prototype 
+h2. view prototype
 
-manually updated @ http://ucla.github.io/heimdallr/, up to date as of commit e20db9d7de
+manually updated @ http://ucla.github.io/heimdallr/
 
-note: parts are intended to be viewed at 1440px wide or higher, evergreen browser or IE10+. 
+note: parts are intended to be viewed at 1440px wide or higher, evergreen browser or IE10+.
 
 h2. Dependencies
 
@@ -16,11 +16,12 @@ This contains custom elements from polymer and will pull in the custom elements 
 
 Built from https://github.com/ucla/generator-polymer
 
-You'll need "https://www.npmjs.com":NPM, "http://bower.io":Bower & "http://bundler.io":Bundler. Once you have those going, run a bower + bundler install.
+You'll need "https://www.npmjs.com":NPM, "http://bower.io":Bower & "http://bundler.io":Bundler. Once you have those going, run installs for bower, bundler, and npm components.
 
 $ @grunt serve@ to view or just $ @grunt@ to build out @/dist@.
 
 h2. TODO
 
 * custom element for modal password check for full timers
-* chrome does not display screaming cat emoji!!
+* JS behaviour for the manage affiliations
+* style <cove-overlay> inside <password-check>
