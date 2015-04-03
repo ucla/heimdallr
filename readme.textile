@@ -24,4 +24,4 @@ h2. TODO
 
 * custom element for modal password check for full timers
 * JS behaviour for the manage affiliations
-* style <cove-overlay> inside <password-check>
+* style @<cove-overlay>@ inside @<password-check>@
