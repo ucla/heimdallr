@@ -225,6 +225,8 @@ module.exports = function (grunt) {
             'elements/**',
             '!elements/**/*.scss',
             'images/{,*/}*.{webp,gif}',
+            'scripts/**',
+            '!scripts/app.js',
             'fonts/**' ]
         }, {
           expand: true,
