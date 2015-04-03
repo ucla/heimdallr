@@ -33,6 +33,5 @@ $ @grunt serve@ to view or just $ @grunt@ to build out @/dist@.
 
 h2. TODO
 
-* polish fail/success styles a bit
 * JS behaviour for the manage affiliations
 * style @<cove-overlay>@ inside @<password-check>@
