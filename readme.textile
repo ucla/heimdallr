@@ -4,7 +4,7 @@ Front end for admin level UCLA (BOL) account management.
 
 Son of Odin, brother to Baldr - SURPASSING BOTH!
 
-h2. view prototype
+h2. View Prototype
 
 manually updated @ http://ucla.github.io/heimdallr/
 
@@ -14,9 +14,18 @@ h2. Dependencies
 
 This contains custom elements from polymer and will pull in the custom elements from separate repos once they've matured.
 
-Built from https://github.com/ucla/generator-polymer
+Built from https://github.com/ucla/generator-polymer - the structure of this app is based upon what you'll find there, so that's a good place to start.
 
-You'll need "https://www.npmjs.com":NPM, "http://bower.io":Bower & "http://bundler.io":Bundler. Once you have those going, run installs for bower, bundler, and npm components.
+In order to build dependencies you'll need to install "Node + NPM":https://www.npmjs.com, "Bower":http://bower.io & "Bundler":http://bundler.io if you haven't already. The instructions assume you're running OS X or some flavour of Linux.
+
+* Go to https://nodejs.org and download and run the Node installer for the operating system you're using
+* After that's done run @sudo npm install npm -g@ just to be on the safe side to make sure you're using the latest node package manager
+* Install Bower with npm by running @npm install -g bower@
+* Install Bundler (you may need to sudo) with @gem install bundler@
+* Navigate to the directory you've cloned/downloaded this repository to
+* run @npm install@
+* run @bower install@
+* run @bundle install@
 
 $ @grunt serve@ to view or just $ @grunt@ to build out @/dist@.
 
