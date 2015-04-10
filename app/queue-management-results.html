@@ -1,40 +1,10 @@
-<!doctype html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>heimdallr</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-
-  <!-- build:css styles/screen.css -->
-  <link rel="stylesheet" href="styles/screen.css">
-  <!-- endbuild-->
-
-  <script src="scripts/vendor/modernizr.custom.js"></script>
-
-  <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
-  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-  <!-- endbuild -->
-
-  <!-- build:vulcanized elements/elements.vulcanized.html -->
-  <link rel="import" href="elements/elements.html">
-  <!-- endbuild-->
-</head>
+include "head"
 
 <body unresolved class="main-wide">
 
-  <ucla-header>
-    <h1>UCLA Account Management</h1>
+  include "ucla-header-full-time"
 
-    <aside>
-      <span>Logged in as Eugene Acosta</span>
-      <button href="#">Log out</button>
-    </aside>
-  </ucla-header>
-
-  <div role="main" class="general-contents">
+  <div role="main">
 
     <h1>Password Request Queue Management Results</h1>
 
@@ -48,12 +18,4 @@
 
   </div>
 
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/webshim/js-webshim/minified/polyfiller.js"></script>
-
-  <!-- build:js scripts/app.js -->
-  <script src="scripts/app.js"></script>
-  <!-- endbuild-->
-</body>
-
-</html>
+include "footer"
