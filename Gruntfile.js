@@ -30,7 +30,10 @@ module.exports = function (grunt) {
         ]
       },
       includes: {
-        files: ['<%= yeoman.app %>/includes/*.html'],
+        files: [
+          '<%= yeoman.app %>/*.html',
+          '<%= yeoman.app %>/includes/*.html'
+        ],
         tasks: ['includes:server']
       },
       js: {
