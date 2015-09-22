@@ -1,5 +1,4 @@
 @import 'breakpoint';
-@import 'toolkit';
 @import 'config/global-vars';
 
 :host {
@@ -41,7 +40,7 @@
   text-align: right;
   padding-right: $default-spacing;
   font-weight: bold;
-  clear: both;
+  @include clearfix();
 }
 
 ::content dd {

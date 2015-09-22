@@ -1,10 +1,19 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="query-feedback" attributes="" noscript>
+<dom-module id="query-feedback">
+
+  <link rel="import" type="css" href="query-feedback.css">
+
   <template>
-    <link rel="stylesheet" href="query-feedback.css">
     <h2>Performing Action...</h2>
     <content select="dl"></content>
     <content select="h3"></content>
   </template>
-</polymer-element>
+
+  <script>
+    Polymer({
+      is: 'query-feedback',
+    });
+  </script>
+
+</dom-module>
