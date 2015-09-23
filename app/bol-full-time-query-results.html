@@ -34,8 +34,10 @@ include "head"
               <form id="map-an-id" role="form" action="/" method="post" class="ws-validate">
                 <legend>Map UID to Joe Bruin's Account</legend>
 
-                <label for="map-an-id--uid" hidden>UID to be mapped</label>
-                <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped" aria-required="true" pattern=".{9}" required data-errormessage="UIDs must be 9 characters long" >
+                <fieldset>
+                  <label for="map-an-id--uid" hidden>UID to be mapped</label>
+                  <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped" aria-required="true" pattern=".{9}" required data-errormessage="UIDs must be 9 characters long" >
+                </fieldset>
 
                 <label class="for-checkbox"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked>Copy alternate email address if empty on UID</label>
 
@@ -59,11 +61,15 @@ include "head"
                   <li>special characters: !@#$%^&*().,</li>
                 </ul>
 
-                <label for="pass-requested" hidden>New Password</label>
-                <input id="pass-requested" name="pass-requested" type="password" placeholder="Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required data-errormessage="Passwords must be at least 8 characters long">
+                <fieldset>
+                  <label for="pass-requested" hidden>New Password</label>
+                  <input id="pass-requested" name="pass-requested" type="password" placeholder="Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required data-errormessage="Passwords must be at least 8 characters long">
+                </fieldset>
 
-                <label for="pass-requested-confirm" hidden>Confirm New Password</label>
-                <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required data-errormessage="Passwords must be at least 8 characters long">
+                <fieldset>
+                  <label for="pass-requested-confirm" hidden>Confirm New Password</label>
+                  <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required data-errormessage="Passwords must be at least 8 characters long">
+                </fieldset>
 
                 <button data-dialog="password-confirm" type="button" class="primary-button">Change Password</button>
               </form>
@@ -74,22 +80,28 @@ include "head"
             <section>
               <form id="alt-email-address" role="form" action="/" method="post" class="ws-validate">
                 <legend>Set an alternate email address</legend>
-
-                <label for="alt-email-address-input" hidden>Alternate Email Address</label>
-                <input id="alt-email-address-input" name="alt-email-address-input" type="email" placeholder="Alternate Email Address" aria-required="true" required>
+                <fieldset>
+                  <label for="alt-email-address-input" hidden>Alternate Email Address</label>
+                  <input id="alt-email-address-input" name="alt-email-address-input" type="email" placeholder="Alternate Email Address" aria-required="true" required>
+                </fieldset>
 
                 <button data-dialog="password-confirm" type="button" class="primary-button">Set Alternate Email Address</button>
               </form>
+
               <strong class="line-thru">or</strong>
+
               <form id="routing-address" role="form" action="/" method="post" class="ws-validate">
                 <legend>Set routing address</legend>
-
-                <label for="routing-address-input" hidden>Routing Address</label>
-                <input id="routing-address-input" name="routing-address-input" type="email" placeholder="Routing Address" aria-required="true" required>
+                <fieldset>
+                  <label for="routing-address-input" hidden>Routing Address</label>
+                  <input id="routing-address-input" name="routing-address-input" type="email" placeholder="Routing Address" aria-required="true" required>
+                </fieldset>
 
                 <button data-dialog="password-confirm" type="button" class="primary-button">Set Routing Address</button>
               </form>
+
               <strong class="line-thru">or</strong>
+
               <form id="bol-mail-storage" role="form" action="/" method="post" class="ws-validate">
                 <legend>Create BOL Mail Storage</legend>
                 <button data-dialog="password-confirm" type="button" class="primary-button">Create BOL Mail Storage</button>

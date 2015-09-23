@@ -8,7 +8,7 @@ webshim.setOptions('forms', {
   //show custom styleable validation bubble
   replaceValidationUI: true,
   handleBubble: 'hide',
-  fieldWrapper: '.fieldset',
+  fieldWrapper: 'fieldset',
   iVal: {
     'recheckDelay': 200,
   }
@@ -24,7 +24,7 @@ $('.account-actions')
 ;
 
 /////////////////////////////////////////
-///           polymer actions
+///         polymer behaviour
 /////////////////////////////////////////
 
 // glue together <paper-tabs> & <iron-pages>

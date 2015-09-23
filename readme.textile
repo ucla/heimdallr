@@ -34,5 +34,5 @@ $ @grunt serve@ to view or just $ @grunt --force@ to build out @/dist@.
 h2. TODO
 
 * <password-check> custom element
-* webshim validation errors off-target
-* include task not running on grunt build
+* html include task not running on grunt build
+* JS password strength check?
