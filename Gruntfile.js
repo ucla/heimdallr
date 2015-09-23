@@ -55,6 +55,7 @@ module.exports = function (grunt) {
         tasks: ['sass:server', 'autoprefixer:server']
       }
     },
+    // parses contents of /includes dir into main .html files
     includes: {
       dist: {
         cwd: '<%= yeoman.app %>',
