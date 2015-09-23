@@ -39,6 +39,7 @@ $black: #000;
 
 $primary-color: $ucla-blue;
 $primary-color-safe: $ucla-blue-safe;
+$primary-color-alternate-state: $ucla-blue-dark;
 $secondary-color: $ucla-gold;
 
 $success-color: $ucla-green;
@@ -54,7 +55,7 @@ $footer-link-color: $white;
 $footer-link-color-hover: $ucla-yellow;
 
 $form-valid-color: $success-color;
-$form-invalid-color: $ucla-pink;
+$form-invalid-color: $error-color;
 $input-background-color: lighten($neutral, 19%);
 $input-background-color-focus: $white;
 
@@ -67,9 +68,8 @@ $alternate-light-grey: lighten($neutral, 15%);
 
 $html-background: $white;
 $html-background-size: auto;
-
-$body-background: $white;
 $body-text-color: #444;
+$body-background-color: $white;
 
 $font-stack: 'Proxima Nova', Verdana, sans-serif;
 $font-stack-alt: 'Proxima Nova', Verdana, sans-serif;

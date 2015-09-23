@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.0",
+    "polymer": "Polymer/polymer#^1",
     "paper-elements": "PolymerElements/paper-elements#^1",
     "iron-elements": "PolymerElements/iron-elements#^1",
     "webshim": "~1.15",
