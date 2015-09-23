@@ -1,20 +1,4 @@
-(function (document) {
-  'use strict';
-
-  document.addEventListener('polymer-ready', function() {
-    // foo
-  });
-
-  var tabs = document.querySelector('paper-tabs');
-  var pages = document.querySelector('core-pages');
-
-  if (tabs) {
-      tabs.addEventListener('core-select',function(){
-        pages.selected = tabs.selected;
-      });
-  }
-  
-
-// wrap document so it plays nice with other libraries
-// http://www.polymer-project.org/platform/shadow-dom.html#wrappers
-})(wrap(document));
+document.addEventListener('WebComponentsReady', function () {
+  var template = document.querySelector('template#tabbed-results-nav');
+  template.selected = 0; // selected is an index by default
+});

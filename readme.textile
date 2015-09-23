@@ -33,5 +33,4 @@ $ @grunt serve@ to view or just $ @grunt@ to build out @/dist@.
 
 h2. TODO
 
-* glue together <paper-tabs> and <iron-pages>
 * shady dom styles + shifts with updated iam-ucla-core
