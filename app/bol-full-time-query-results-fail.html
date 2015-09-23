@@ -1,6 +1,6 @@
 include "head"
 
-<body unresolved class="main-wide">
+<body unresolved class="main-wide" onclick="clickHandler(event)">
 
   include "ucla-header-full-time"
 
@@ -11,6 +11,8 @@ include "head"
     </header>
 
     include "sample-full-time-results"
+
+    <password-confirm id="password-confirm" modal role="alertdialog"></password-confirm>
 
     <template is="dom-bind" id="tabbed-results-nav">
       <aside class="account-actions">
@@ -160,7 +162,7 @@ include "head"
 
                   <label class="for-checkbox"><input type="checkbox" value="googleapps-eligible">Google Apps eligible</label>
 
-                  <password-confirm>Update Access to BOL Services</password-confirm>
+                  <button data-dialog="password-confirm" type="button" class="primary-button">Update Access to BOL Services</button>
               </form>
             </section>
 
@@ -212,7 +214,7 @@ include "head"
                   <input type="tel" name="approver-phone-1" id="approver-phone-1" placeholder="Approver's Phone" value="54321">
                 </fieldset>
 
-                <password-confirm>Save Affiliation Changes</password-confirm>
+                <button data-dialog="password-confirm" type="button" class="primary-button">Save Affiliation Changes</button>
                 <button class="cancel-button" type="reset" name="affiliation-clear">Clear Affiliation Info</button>
               </form>
             </section>
@@ -253,7 +255,7 @@ include "head"
                 <label for="dhreasonfield">Reason:</label>
                 <textarea id="dhreasonfield" rows="3" cols="40"></textarea>
 
-                <password-confirm>Save Holds</password-confirm>
+                <button data-dialog="password-confirm" type="button" class="primary-button">Save Holds</button>
                 <button class="cancel-button" type="reset" name="service-holds-clear">Clear All Holds</button>
               </form>
             </section>

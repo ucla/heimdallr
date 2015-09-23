@@ -2,6 +2,8 @@
 ///     load & configure webshims
 /////////////////////////////////////////
 
+// https://afarkas.github.io/webshim/demos/index.html#Forms
+
 webshim.setOptions('forms', {
   //set lazyCustomMessages to true
   lazyCustomMessages: true,
@@ -18,6 +20,7 @@ webshim.setOptions('forms', {
 webshim.polyfill('forms forms-ext sticky');
 
 // add sticky to account-actions for chrome
+// https://afarkas.github.io/webshim/demos/index.html#sticky
 $('.account-actions')
 	.addClass('ws-sticky')
 	.trigger('wssticky')

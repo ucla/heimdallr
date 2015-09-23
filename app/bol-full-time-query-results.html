@@ -1,6 +1,6 @@
 include "head"
 
-<body unresolved class="main-wide">
+<body unresolved class="main-wide" onclick="clickHandler(event)">
 
   include "ucla-header-full-time"
 
@@ -11,6 +11,8 @@ include "head"
     </header>
 
     include "sample-full-time-results"
+
+    <password-confirm id="password-confirm" modal role="alertdialog"></password-confirm>
 
     <template is="dom-bind" id="tabbed-results-nav">
       <aside class="account-actions">
@@ -24,8 +26,6 @@ include "head"
           <paper-tab>Manage Holds</paper-tab>
           <paper-tab>Audit History</paper-tab>
         </paper-tabs>
-
-        <password-confirm id="password-confirm" modal role="alertdialog"></password-confirm>
 
         <iron-pages selected="{{selected}}">
 
