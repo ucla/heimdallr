@@ -36,7 +36,7 @@ related-results-and-actions, .main-wide div[role="main"] {
 
 .main-narrow div[role="main"] {
   display: block;
-  width: 44rem;
+  width: 42em;
   margin: 0 auto;
   flex: 1 0 auto;
 }
@@ -46,7 +46,7 @@ labeled-results:first-child h2 {
 }
 
 .query-results {
-  width: 39rem;
+  width: 42rem;
   @include breakpoint($collapse-account-actions) {
     float: left;
   }
@@ -55,7 +55,7 @@ labeled-results:first-child h2 {
 .account-actions {
   max-width: 60rem;
   @include breakpoint($collapse-account-actions) {
-    margin-left: 41rem;
+    margin-left: 44rem;
     position: sticky;
     top: 10px;
   }
