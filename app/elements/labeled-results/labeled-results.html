@@ -11,16 +11,10 @@
     <core-selection id="selection" on-core-select="selectAction"></core-selection>
   </template>
 
-  <script>
-    Polymer({
-      is: 'labeled-results',
-      itemTapAction: function(e, detail, sender) {
-        this.$.selection.select(e.target);
-      },
-      selectAction: function(e, detail, sender) {
-        detail.item.classList.toggle('selected', detail.isSelected);
-      }
-    });
-  </script>
-
 </dom-module>
+
+<script>
+  Polymer({
+    is: 'labeled-results',
+  });
+</script>

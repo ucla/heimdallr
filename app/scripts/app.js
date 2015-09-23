@@ -24,10 +24,24 @@ $('.account-actions')
 ;
 
 /////////////////////////////////////////
-///   <paper-tabs> + <iron pages>
+///           polymer actions
 /////////////////////////////////////////
 
+// glue together <paper-tabs> & <iron-pages>
 document.addEventListener('WebComponentsReady', function () {
   var template = document.querySelector('template#tabbed-results-nav');
   template.selected = 0; // selected is an index by default
 });
+
+// modal dialog behaviour for <password-confirm>
+function clickHandler(e) {
+  if (!e.target.hasAttribute('data-dialog')) {
+    return;
+  }
+  var id = e.target.getAttribute('data-dialog');
+  var dialog = document.getElementById(id);
+  if (dialog) {
+    dialog.toggle();
+    e.target.toggleAttribute && e.target.toggleAttribute('data-dialog-opened', dialog.opened);
+  }
+}

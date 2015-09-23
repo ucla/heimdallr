@@ -25,6 +25,8 @@ include "head"
           <paper-tab>Audit History</paper-tab>
         </paper-tabs>
 
+        <password-confirm id="password-confirm" modal role="alertdialog"></password-confirm>
+
         <iron-pages selected="{{selected}}">
 
           <div>
@@ -37,7 +39,7 @@ include "head"
 
                 <label class="for-checkbox"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked>Copy alternate email address if empty on UID</label>
 
-                <password-confirm>Try and map it!</password-confirm>
+                <button data-dialog="password-confirm" type="button" class="primary-button">Try to map it!</button>
 
                 <p><a href="bol-full-time-query-results-pass.html">(pass results)</a> <a href="bol-full-time-query-results-fail.html">(fail results)</a></p>
               </form>
@@ -63,7 +65,7 @@ include "head"
                 <label for="pass-requested-confirm" hidden>Confirm New Password</label>
                 <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required data-errormessage="Passwords must be at least 8 characters long">
 
-                <password-confirm>Change Password</password-confirm>
+                <button data-dialog="password-confirm" type="button" class="primary-button">Change Password</button>
               </form>
              </section>
           </div>
@@ -76,7 +78,7 @@ include "head"
                 <label for="alt-email-address-input" hidden>Alternate Email Address</label>
                 <input id="alt-email-address-input" name="alt-email-address-input" type="email" placeholder="Alternate Email Address" aria-required="true" required>
 
-                <password-confirm>Set Alternate Email Address</password-confirm>
+                <button data-dialog="password-confirm" type="button" class="primary-button">Set Alternate Email Address</button>
               </form>
               <strong class="line-thru">or</strong>
               <form id="routing-address" role="form" action="/" method="post" class="ws-validate">
@@ -85,12 +87,12 @@ include "head"
                 <label for="routing-address-input" hidden>Routing Address</label>
                 <input id="routing-address-input" name="routing-address-input" type="email" placeholder="Routing Address" aria-required="true" required>
 
-                <password-confirm>Set Routing Address</password-confirm>
+                <button data-dialog="password-confirm" type="button" class="primary-button">Set Routing Address</button>
               </form>
               <strong class="line-thru">or</strong>
               <form id="bol-mail-storage" role="form" action="/" method="post" class="ws-validate">
                 <legend>Create BOL Mail Storage</legend>
-                <password-confirm>Create BOL Mail Storage</password-confirm>
+                <button data-dialog="password-confirm" type="button" class="primary-button">Create BOL Mail Storage</button>
               </form>
             </section>
           </div>
@@ -112,7 +114,7 @@ include "head"
 
                   <label class="for-checkbox"><input type="checkbox" value="googleapps-eligible">Google Apps eligible</label>
 
-                  <password-confirm>Update Access to BOL Services</password-confirm>
+                  <button data-dialog="password-confirm" type="button" class="primary-button">Update Access to BOL Services</button>
               </form>
             </section>
           </div>
@@ -153,7 +155,7 @@ include "head"
                   <input type="tel" name="approver-phone-1" id="approver-phone-1" placeholder="Approver's Phone" value="54321">
                 </fieldset>
 
-                <password-confirm>Save Affiliation</password-confirm>
+                <button data-dialog="password-confirm" type="button" class="primary-button">Save Affiliation</button>
                 <button class="cancel-button" type="reset" name="affiliation-clear">Clear Affiliation Info</button>
               </form>
             </section>
@@ -184,7 +186,8 @@ include "head"
                 <label for="dhreasonfield">Reason:</label>
                 <textarea id="dhreasonfield" rows="3" cols="40"></textarea>
 
-                <password-confirm>Save Holds</password-confirm>
+                <button data-dialog="password-confirm" type="button" class="primary-button">Save Holds</button>
+
                 <button class="cancel-button" type="reset" name="service-holds-clear">Clear All Holds</button>
               </form>
             </section>
