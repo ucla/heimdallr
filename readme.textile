@@ -33,4 +33,4 @@ $ @grunt serve@ to view or just $ @grunt@ to build out @/dist@.
 
 h2. TODO
 
-* shady dom styles + shifts with updated iam-ucla-core
+* <password-check> custom element
