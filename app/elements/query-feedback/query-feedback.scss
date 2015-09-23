@@ -24,19 +24,19 @@
    border-bottom: $default-spacing solid transparent;
 }
 
-::content dl {
+:host > ::content dl {
   font-size: $meta-font-size;
 }
 
-::content dl dd {
+:host > ::content dd {
   font-weight: bold;
 }
 
-::content p {
+:host > ::content p {
   font-size: $meta-font-size;
 }
 
-::content h3 {
+:host > ::content h3 {
   display: inline-block;
   margin-top: 0;
 }
