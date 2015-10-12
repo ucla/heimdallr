@@ -4,11 +4,7 @@ Front end for admin level UCLA (BOL) account management.
 
 Son of Odin, brother to Baldr - SURPASSING BOTH!
 
-h2. View Prototype
-
-manually updated @ http://ucla.github.io/heimdallr/
-
-note: parts are intended to be viewed at 1440px wide or higher, evergreen browser or IE10+.
+note: due to user research this is not responsive. intended to be viewed on a wide display (1440px+) evergreen browser or IE10+.
 
 h2. Dependencies
 
