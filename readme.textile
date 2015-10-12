@@ -4,11 +4,7 @@ Front end for admin level UCLA (BOL) account management.
 
 Son of Odin, brother to Baldr - SURPASSING BOTH!
 
-h2. View Prototype
-
-manually updated @ http://ucla.github.io/heimdallr/
-
-note: parts are intended to be viewed at 1440px wide or higher, evergreen browser or IE10+.
+note: due to user research this is not responsive. intended to be viewed on a wide display (1440px+) evergreen browser or IE10+.
 
 h2. Dependencies
 
@@ -29,9 +25,4 @@ In order to build dependencies you'll need to install "Node + NPM":https://www.n
 
 h2. Running the Site Locally
 
-$ @grunt serve@ to view or just $ @grunt@ to build out @/dist@.
-
-h2. TODO
-
-* JS behaviour for the manage affiliations
-* style @<cove-overlay>@ inside @<password-check>@
+$ @grunt serve@ to view
