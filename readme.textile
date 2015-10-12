@@ -33,5 +33,6 @@ $ @grunt serve@ to view or just $ @grunt --force@ to build out @/dist@.
 
 h2. TODO
 
-* html include task not running on grunt build
+* html include task not properly executing on grunt build
 * JS password strength check?
+* structure password-confirm like 0.5? overlay doesn't seem to like that
