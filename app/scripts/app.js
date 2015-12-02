@@ -16,6 +16,18 @@ webshim.setOptions('forms', {
   }
 });
 
+//configure forms-ext features
+webshim.setOptions('forms-ext', {
+	replaceUI: 'true',
+	types: 'date',
+	date: {
+		startView: 1,
+		size: 2,
+		openOnFocus: true,
+		classes: 'show-week'
+	}
+});
+
 //start polyfilling
 webshim.polyfill('forms forms-ext sticky');
 
