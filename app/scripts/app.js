@@ -33,7 +33,7 @@ $('.account-actions')
 // glue together <paper-tabs> & <iron-pages>
 document.addEventListener('WebComponentsReady', function () {
   var template = document.querySelector('template#tabbed-results-nav');
-  template.selected = 0; // selected is an index by default
+  if (template) template.selected = 0; // selected is an index by default
 });
 
 // modal dialog behaviour for <password-confirm>
