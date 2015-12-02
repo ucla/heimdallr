@@ -12,6 +12,11 @@
   margin: auto;
 }
 
+.hero-form .ws-errorbox {
+  margin-top: $half-spacing;
+  margin-bottom: 0;
+}
+
 .hero-form-input {
   font-size: $h1-font-size;
   width: 41rem;
