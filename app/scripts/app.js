@@ -3,29 +3,31 @@
 /////////////////////////////////////////
 
 // https://afarkas.github.io/webshim/demos/index.html#Forms
-
-webshim.setOptions('forms', {
-  //set lazyCustomMessages to true
-  lazyCustomMessages: true,
-  //show custom styleable validation bubble
-  replaceValidationUI: true,
-  handleBubble: 'hide',
-  fieldWrapper: 'fieldset',
-  iVal: {
-    'recheckDelay': 200,
+// https://afarkas.github.io/webshim/demos/#Forms-forms-ext
+webshim.setOptions({
+  'forms': {
+    //set lazyCustomMessages to true
+    lazyCustomMessages: true,
+    //show custom styleable validation bubble
+    replaceValidationUI: true,
+    handleBubble: 'hide',
+    fieldWrapper: 'fieldset',
+    iVal: {
+      'recheckDelay': 200,
+    }
+  },
+  'forms-ext': {
+    // replace default browser implementation of date inputs
+  	replaceUI: 'true',
+  	types: 'date',
+  	// pass some config for it
+  	date: {
+  		startView: 1,
+  		size: 2,
+  		openOnFocus: true,
+  		classes: 'show-week'
+	  }
   }
-});
-
-//configure forms-ext features
-webshim.setOptions('forms-ext', {
-	replaceUI: 'true',
-	types: 'date',
-	date: {
-		startView: 1,
-		size: 2,
-		openOnFocus: true,
-		classes: 'show-week'
-	}
 });
 
 //start polyfilling
