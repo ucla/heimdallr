@@ -8,7 +8,7 @@ note: due to user research this is not responsive. intended to be viewed on a wi
 
 h2. Dependencies
 
-This contains custom elements built using polymer, and a github submodule of some shared team SCSS styles.
+This contains custom elements built using polymer, and a github submodule of some "shared team SCSS styles":https://github.com/ucla/ucla-iam-core.
 
 In order to build dependencies you'll need to install "Node + NPM":https://www.npmjs.com, "Bower":http://bower.io & "Bundler":http://bundler.io if you haven't already. The instructions assume you're running OS X or some flavour of Linux.
 
