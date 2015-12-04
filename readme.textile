@@ -8,9 +8,7 @@ note: due to user research this is not responsive. intended to be viewed on a wi
 
 h2. Dependencies
 
-This contains custom elements from polymer and will pull in the custom elements from separate repos once they've matured.
-
-Built from https://github.com/ucla/generator-polymer - the structure of this app is based upon what you'll find there, so the "readme":https://github.com/ucla/generator-polymer/blob/master/readme.md or my brief "wiki page":https://github.com/ucla/generator-polymer/wiki there are a good place to start.
+This contains custom elements built using polymer, and a github submodule of some shared team SCSS styles.
 
 In order to build dependencies you'll need to install "Node + NPM":https://www.npmjs.com, "Bower":http://bower.io & "Bundler":http://bundler.io if you haven't already. The instructions assume you're running OS X or some flavour of Linux.
 
@@ -26,3 +24,4 @@ In order to build dependencies you'll need to install "Node + NPM":https://www.n
 h2. Running the Site Locally
 
 $ @grunt serve@ to view
+$ @grunt serve --force@ to view if it gives you some sass
