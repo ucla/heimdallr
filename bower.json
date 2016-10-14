@@ -8,5 +8,11 @@
     "iron-elements": "PolymerElements/iron-elements#^1",
     "webshim": "~1.15",
     "jquery": "~2.1"
+  },
+  "resolutions": {
+    "polymer": "^1.7.0",
+    "marked-element": "^1.0.0",
+    "webcomponentsjs": "^0.7.20",
+    "web-animations-js": "^2.2.0"
   }
 }
